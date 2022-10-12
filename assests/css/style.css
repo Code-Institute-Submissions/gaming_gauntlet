@@ -1,0 +1,36 @@
+/* GENERAL */
+
+body {
+    font-family: 'Silkscreen', sans-serif;
+    background-color: #585959;
+}
+
+/* NAVBAR */
+
+.nav {
+    height: 10vh;
+    background-color: #000;
+}
+
+.game-links {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.game-link {
+    display: block;
+    height: 100%;
+    padding: 100% 2rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.game-link.active {
+    background-color: #585959;
+
+}
