@@ -23,7 +23,7 @@ body {
 .game-link {
     display: block;
     height: 100%;
-    padding: 100% 2rem;
+    padding: 4vh 2rem;
     color: #fff;
     cursor: pointer;
     font-size: 1.5rem;
@@ -32,5 +32,30 @@ body {
 
 .game-link.active {
     background-color: #585959;
+}
 
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 70vh;
+    width: 80vw;
+    margin: 10vh auto 0;
+    border-bottom-right-radius: 10rem 20rem;
+    border-top-right-radius: 10rem 20rem;
+    border-top-left-radius: 10rem 20rem;
+    border-bottom-left-radius: 10rem 20rem;
+}
+
+/* GAME CANVAS */
+
+canvas {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 10rem 20rem;
+    border-top-right-radius: 10rem 20rem;
+    border-top-left-radius: 10rem 20rem;
+    border-bottom-left-radius: 10rem 20rem;
+    
 }
