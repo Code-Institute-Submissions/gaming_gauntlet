@@ -31,7 +31,9 @@ const paddle = {
     x: canvas.width / 2 - 20,
     y: canvas.height - 10,
     width: 40,
-    height: 5
+    height: 5,
+    speed: 8,
+    xDirection: 0
 }
 
 //Create individual bricks 
@@ -75,6 +77,19 @@ function drawBricks() {
     })
 }
 
+// paddle movement  
+function movePaddle() {
+    paddle.x += paddle.xDirection
+
+    if (paddle.x < 0) {
+        paddle.x = 0
+    }
+
+    if (paddle.x > canvas.width - paddle.width) {
+        paddle.x = canvas.width - paddle.width
+    }
+}
+
 // Call all draw functions
 
 function draw() {
@@ -83,4 +98,39 @@ function draw() {
     drawBricks()
 }
 
-draw()
+function update() {
+    //clear canvas every frame
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    draw()
+    movePaddle() 
+     
+
+    requestAnimationFrame(update)
+}
+
+
+update()
+
+
+//right and left arrow key functionality 
+function keyDown(e) {
+    if (e.key === 'ArrowLeft' || e.key === 'Left') {
+        paddle.xDirection = - paddle.speed
+        console.log('left')
+    }
+
+    if (e.key === 'ArrowRight' || e.key === 'Right') {
+        paddle.xDirection =  paddle.speed
+    }
+}
+
+function keyUp(e) {
+    if(e.key === 'ArrowLeft' || e.key === 'Left' || e.key === 'ArrowRight' || e.key === 'Right') {
+        paddle.xDirection = 0
+    }
+}
+
+//Event listeners for left and right keys
+
+window.addEventListener('keydown', keyDown)
+window.addEventListener('keyup', keyUp)
