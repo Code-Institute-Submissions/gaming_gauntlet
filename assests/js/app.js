@@ -2,6 +2,7 @@ const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 
 let bricks = []
+let lives = 3
 
 let brickRowCount = 8
 let brickColumnCount = 4
@@ -21,6 +22,10 @@ const ball = {
     x: canvas.width / 2 ,
     y: canvas.height / 2,
     diameter: 4,
+    speedX: 2,
+    speedY: 2,
+    xDirection: 0,
+    yDirection: 0
 }
 
 console.log(canvas.width)
@@ -90,6 +95,46 @@ function movePaddle() {
     }
 }
 
+function moveBall() {
+
+    if (ball.x + ball.diameter > canvas.width) {
+         ball.speedX *= -1
+    
+    }
+
+    if(ball.x < 10) {
+        ball.speedX *= -1
+    }
+    
+    ball.xDirection = ball.speedX
+    ball.x += ball.xDirection 
+
+    if (ball.y -ball.diameter < 0) {
+        ball.speedY *= -1
+    }
+
+    if (ball.y + ball.diameter > canvas.height) {
+        ball.x = canvas.width / 2
+        ball.y = canvas.height /2
+        ball.speedY *= -1
+        lives += - 1
+        console.log(lives)
+    }
+
+    //paddle colision
+
+    if (ball.y + ball.diameter > paddle.y &&
+         ball.x - ball.diameter > paddle.x && 
+         ball.x + ball.diameter < paddle.x + paddle.width) 
+           {
+        ball.speedY *= -1
+        console.log('hello')
+    }
+    ball.yDirection = ball.speedY
+    ball.y += - ball.yDirection
+
+}
+
 // Call all draw functions
 
 function draw() {
@@ -103,6 +148,7 @@ function update() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     draw()
     movePaddle() 
+    moveBall()
      
 
     requestAnimationFrame(update)
