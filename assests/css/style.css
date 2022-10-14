@@ -37,6 +37,7 @@ body {
 .game-container {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fff;
@@ -48,6 +49,15 @@ body {
     border-top-right-radius: 10rem 20rem;
     border-top-left-radius: 10rem 20rem;
     border-bottom-left-radius: 10rem 20rem;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h1,h2 {
+    padding: 4rem;
+    text-align: center;
 }
 
 /* GAME CANVAS */
