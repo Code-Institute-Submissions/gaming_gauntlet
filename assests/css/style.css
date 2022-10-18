@@ -9,6 +9,7 @@ body {
 
 .nav {
     height: 10vh;
+    width: 100%;
     background-color: #000;
 }
 
@@ -77,4 +78,59 @@ canvas {
     height: 100%;
     z-index: 2;
     position: absolute;
+}
+
+.win-lose-screen {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #fff;
+    color: #585959;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+} 
+
+/* Mobile Buttons */
+
+.mobile-buttons {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding:  6rem;
+}
+
+.left-arrow {
+    font-size: 4rem;
+    border: 5px solid #000;
+}
+
+.left-arrow i {
+    padding: 1rem;
+}
+
+.right-arrow {
+    font-size: 4rem;
+    border: 5px solid #000;
+}
+
+.right-arrow i {
+    padding: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+
+    .game-container {
+        height: 60vh;
+    }
+    .game-link {
+        font-size: 0.8rem;
+        padding: 6vh 1rem;
+      
+    }
+
+    .mobile-buttons {
+        display: flex;
+    }
 }

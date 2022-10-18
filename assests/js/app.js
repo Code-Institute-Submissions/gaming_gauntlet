@@ -1,10 +1,17 @@
 /* jshint esversion: 11 */
 
+const winLoseScreen = document.getElementById('win-lose-screen')
+
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 
+// mobile touch buttons
+const leftBtn = document.getElementById('left-arrow')
+const rightBtn = document.getElementById('right-arrow')
+
 let bricks = []
 let lives = 3
+let score = 0
 
 let brickRowCount = 8
 let brickColumnCount = 6
@@ -30,7 +37,7 @@ const ball = {
     yDirection: 0
 }
 
-console.log(canvas.width)
+
 
 // Create Paddle
 
@@ -130,7 +137,7 @@ function moveBall() {
         ball.y = canvas.height /2
         ball.speedY *= -1
         lives += - 1
-        console.log(lives)
+        score = 0
     }
 
     //paddle colision
@@ -140,7 +147,6 @@ function moveBall() {
          ball.x + ball.radius < paddle.x + paddle.width) 
            {
         ball.speedY *= -1
-        console.log('hello')
     }
     ball.yDirection = ball.speedY
     ball.y += - ball.yDirection
@@ -155,12 +161,14 @@ function moveBall() {
                     ball.y + ball.radius > brick.y &&
                     ball.y - ball.radius < brick.y + brick.height) {
                         brick.visible = false
+                        score += 1
                         ball.speedY *= -1
                     }
             }
 
             if (ball.y + ball.radius > canvas.height) {
                 brick.visible = true
+                
             }
         })
     })
@@ -182,6 +190,11 @@ function update() {
     draw()
     movePaddle() 
     moveBall()
+
+    if (score >= 45) {
+        winLoseScreen.style.display = 'flex'
+
+    }
      
 
     requestAnimationFrame(update)
@@ -190,12 +203,15 @@ function update() {
 
 update()
 
+if (score === 5) {
+    winLoseScreen.style.display = 'flex'
+}
+
 
 //right and left arrow key functionality 
 function keyDown(e) {
     if (e.key === 'ArrowLeft' || e.key === 'Left') {
         paddle.xDirection = - paddle.speed
-        console.log('left')
     }
 
     if (e.key === 'ArrowRight' || e.key === 'Right') {
@@ -209,7 +225,41 @@ function keyUp(e) {
     }
 }
 
+function touchDown(e) {
+    if (e.target == 'i.fa.fa-chevron-left') {
+        paddle.xDirection = - paddle.speed
+        console.log('hi')
+    }
+
+    if (e.key === 'i.fa.fa-chevron-right' ) {
+        paddle.xDirection =  paddle.speed
+    }
+
+}
+
+function touchUp(e) {
+    if(e.key === 'ArrowLeft' || e.key === 'Left' || e.key === 'ArrowRight' || e.key === 'Right') {
+        paddle.xDirection = 0
+    }
+}
+
 //Event listeners for left and right keys
 
 window.addEventListener('keydown', keyDown)
 window.addEventListener('keyup', keyUp)
+
+
+leftBtn.addEventListener('touchstart', () => {
+    paddle.xDirection = - paddle.speed
+})
+leftBtn.addEventListener('touchend', () => {
+    paddle.xDirection = 0
+})
+
+rightBtn.addEventListener('touchstart', () => {
+    paddle.xDirection = paddle.speed
+})
+rightBtn.addEventListener('touchend', () => {
+    paddle.xDirection = 0
+})
+
