@@ -45,10 +45,10 @@ body {
     width: 80vw;
     margin: 10vh auto 0;
     overflow: hidden;
-    border-bottom-right-radius: 10rem 20rem;
-    border-top-right-radius: 10rem 20rem;
-    border-top-left-radius: 10rem 20rem;
-    border-bottom-left-radius: 10rem 20rem;
+    border-bottom-right-radius: 10vw 20vw;
+    border-top-right-radius: 10vw 20vw;
+    border-top-left-radius: 10vw 20vw;
+    border-bottom-left-radius: 10vw 20vw;
 }
 
 h1 {
@@ -65,10 +65,10 @@ h1,h2 {
 canvas {
     width: 100%;
     height: 100%;
-    border-bottom-right-radius: 10rem 20rem;
-    border-top-right-radius: 10rem 20rem;
-    border-top-left-radius: 10rem 20rem;
-    border-bottom-left-radius: 10rem 20rem;
+    border-bottom-right-radius: 10vw 20vw;
+    border-top-right-radius: 10vw 20vw;
+    border-top-left-radius: 10vw 20vw;
+    border-bottom-left-radius: 10vw 20vw;
     
 }
 

@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 
@@ -5,15 +7,15 @@ let bricks = []
 let lives = 3
 
 let brickRowCount = 8
-let brickColumnCount = 4
+let brickColumnCount = 6
 
 //Single brick properties
 const singleBrick = {
     visible: true, 
-    offsetX: 30,
-    offsetY: 20,
-    width: 25,
-    height: 5,
+    offsetX: 70,
+    offsetY: 70,
+    width: 40,
+    height: 15,
     padding: 5
 }
 
@@ -21,9 +23,9 @@ const singleBrick = {
 const ball = {
     x: canvas.width / 2 ,
     y: canvas.height / 2,
-    diameter: 4,
-    speedX: 2,
-    speedY: 2,
+    radius: 6,
+    speedX: 4,
+    speedY: 4,
     xDirection: 0,
     yDirection: 0
 }
@@ -33,10 +35,10 @@ console.log(canvas.width)
 // Create Paddle
 
 const paddle = {
-    x: canvas.width / 2 - 20,
-    y: canvas.height - 10,
-    width: 40,
-    height: 5,
+    x: canvas.width / 2 - 40,
+    y: canvas.height - 20,
+    width: 60,
+    height: 10,
     speed: 8,
     xDirection: 0
 }
@@ -57,7 +59,7 @@ for (let i = 0; i < brickRowCount; i++) {
 // Draw individual items 
 
 function drawBall() {
-    ctx.arc(ball.x, ball.y, ball.diameter, 0, Math.PI * 2)
+    ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2)
     ctx.fillStyle = '#585959'
     ctx.fill()
 }
@@ -75,11 +77,21 @@ function drawBricks() {
         row.forEach(brick => {
             ctx.beginPath()
             ctx.rect(brick.x, brick.y, brick.width, brick.height)
-            ctx.fillStyle = '#585959'
+            ctx.fillStyle = brick.visible ? '#585959' : 'transparent'
             ctx.fill()
             ctx.closePath()
         })
     })
+
+
+}
+
+function drawLives() {
+    ctx.font = '20px Silkscreen'
+    ctx.fillStyle = '#585959'
+    ctx.fillText(`Lives left: ${lives}`, 165, 30)
+    ctx.fill()
+    ctx.closePath()
 }
 
 // paddle movement  
@@ -97,7 +109,7 @@ function movePaddle() {
 
 function moveBall() {
 
-    if (ball.x + ball.diameter > canvas.width) {
+    if (ball.x + ball.radius > canvas.width) {
          ball.speedX *= -1
     
     }
@@ -109,11 +121,11 @@ function moveBall() {
     ball.xDirection = ball.speedX
     ball.x += ball.xDirection 
 
-    if (ball.y -ball.diameter < 0) {
+    if (ball.y -ball.radius < 0) {
         ball.speedY *= -1
     }
 
-    if (ball.y + ball.diameter > canvas.height) {
+    if (ball.y + ball.radius > canvas.height) {
         ball.x = canvas.width / 2
         ball.y = canvas.height /2
         ball.speedY *= -1
@@ -123,15 +135,35 @@ function moveBall() {
 
     //paddle colision
 
-    if (ball.y + ball.diameter > paddle.y &&
-         ball.x - ball.diameter > paddle.x && 
-         ball.x + ball.diameter < paddle.x + paddle.width) 
+    if (ball.y + ball.radius > paddle.y &&
+         ball.x - ball.radius > paddle.x && 
+         ball.x + ball.radius < paddle.x + paddle.width) 
            {
         ball.speedY *= -1
         console.log('hello')
     }
     ball.yDirection = ball.speedY
     ball.y += - ball.yDirection
+
+    //Brick collision
+
+    bricks.forEach(column => {
+        column.forEach(brick => {
+            if (brick.visible) {
+                if (ball.x - ball.radius > brick.x &&
+                    ball.x + ball.radius < brick.x + brick.width &&
+                    ball.y + ball.radius > brick.y &&
+                    ball.y - ball.radius < brick.y + brick.height) {
+                        brick.visible = false
+                        ball.speedY *= -1
+                    }
+            }
+
+            if (ball.y + ball.radius > canvas.height) {
+                brick.visible = true
+            }
+        })
+    })
 
 }
 
@@ -141,6 +173,7 @@ function draw() {
     drawBall()
     drawPaddle()
     drawBricks()
+    drawLives()
 }
 
 function update() {
