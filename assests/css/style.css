@@ -41,7 +41,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: #eee;
     height: 70vh;
     width: 80vw;
     margin: 10vh auto 0;
@@ -64,12 +64,17 @@ h1,h2 {
 /* GAME CANVAS */
 
 canvas {
-    width: 100%;
-    height: 100%;
-    border-bottom-right-radius: 10vw 20vw;
+    width: 90%;
+    height: 90%;
+    background-color: #fff;
+    /* border-bottom-right-radius: 10vw 20vw;
     border-top-right-radius: 10vw 20vw;
     border-top-left-radius: 10vw 20vw;
-    border-bottom-left-radius: 10vw 20vw;
+    border-bottom-left-radius: 10vw 20vw; */
+    border-bottom-right-radius: 3vw;
+    border-top-right-radius: 3vw;
+    border-top-left-radius: 3vw;
+    border-bottom-left-radius: 3vw;
     
 }
 
@@ -124,6 +129,7 @@ canvas {
     .game-container {
         height: 60vh;
     }
+
     .game-link {
         font-size: 0.8rem;
         padding: 6vh 1rem;
@@ -132,5 +138,9 @@ canvas {
 
     .mobile-buttons {
         display: flex;
+    }
+
+    .crt {
+        display: none;
     }
 }

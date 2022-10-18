@@ -26,6 +26,8 @@ const singleBrick = {
     padding: 5
 }
 
+
+
 //Create Ball
 const ball = {
     x: canvas.width / 2 ,
@@ -49,6 +51,8 @@ const paddle = {
     speed: 8,
     xDirection: 0
 }
+
+
 
 //Create individual bricks 
 
@@ -263,3 +267,12 @@ rightBtn.addEventListener('touchend', () => {
     paddle.xDirection = 0
 })
 
+
+//Media queries
+
+const mq = window.matchMedia( "(max-width: 500px)" );
+
+if(mq.matches) {
+    paddle.x = canvas.width / 2 - 50
+    paddle.width = 100
+}
