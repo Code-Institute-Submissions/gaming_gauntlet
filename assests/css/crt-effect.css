@@ -160,4 +160,5 @@
   }
   .crt {
     animation: textShadow 1.6s infinite;
+    opacity: 0.6;
   }
