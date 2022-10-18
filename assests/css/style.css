@@ -1,8 +1,12 @@
 /* GENERAL */
 
+:root {
+    --primary-color: #585959
+}
+
 body {
     font-family: 'Silkscreen', sans-serif;
-    background-color: #585959;
+    background-color: var(--primary-color);
 }
 
 /* NAVBAR */
@@ -32,7 +36,7 @@ body {
 }
 
 .game-link.active {
-    background-color: #585959;
+    background-color: var(--primary-color);
 }
 
 .game-container {
@@ -91,7 +95,7 @@ canvas {
     align-items: center;
     position: absolute;
     background-color: #fff;
-    color: #585959;
+    color: var(--primary-color);
     z-index: 5;
     width: 100%;
     height: 100%;

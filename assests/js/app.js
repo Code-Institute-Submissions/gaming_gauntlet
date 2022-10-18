@@ -4,10 +4,24 @@ const winLoseScreen = document.getElementById('win-lose-screen')
 
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
+let primaryColor 
 
 // mobile touch buttons
 const leftBtn = document.getElementById('left-arrow')
 const rightBtn = document.getElementById('right-arrow')
+
+//decide primary color
+
+function colorPicker() {
+    const root = document.querySelector(':root')
+    if(document.title == "Gaming Gauntlet || Breakout") {
+        root.style.setProperty('--primary-color', 'red')
+        console.log('hi')
+        primaryColor = 'red'
+    }
+}
+
+colorPicker()
 
 let bricks = []
 let lives = 3
@@ -71,14 +85,14 @@ for (let i = 0; i < brickRowCount; i++) {
 
 function drawBall() {
     ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2)
-    ctx.fillStyle = '#585959'
+    ctx.fillStyle = primaryColor
     ctx.fill()
 }
 
 function drawPaddle() {
     ctx.beginPath()
     ctx.rect(paddle.x, paddle.y, paddle.width, paddle.height)
-    ctx.fillStyle = '#585959'
+    ctx.fillStyle = primaryColor
     ctx.fill()
     ctx.closePath()
 }
@@ -88,7 +102,7 @@ function drawBricks() {
         row.forEach(brick => {
             ctx.beginPath()
             ctx.rect(brick.x, brick.y, brick.width, brick.height)
-            ctx.fillStyle = brick.visible ? '#585959' : 'transparent'
+            ctx.fillStyle = brick.visible ? primaryColor : 'transparent'
             ctx.fill()
             ctx.closePath()
         })
@@ -99,7 +113,7 @@ function drawBricks() {
 
 function drawLives() {
     ctx.font = '20px Silkscreen'
-    ctx.fillStyle = '#585959'
+    ctx.fillStyle = primaryColor
     ctx.fillText(`Lives left: ${lives}`, 165, 30)
     ctx.fill()
     ctx.closePath()
