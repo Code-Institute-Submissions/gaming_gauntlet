@@ -4,25 +4,12 @@ const winLoseScreen = document.getElementById('win-lose-screen')
 
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
-let primaryColor 
 
 
 // mobile touch buttons
 const leftBtn = document.getElementById('left-arrow')
 const rightBtn = document.getElementById('right-arrow')
 
-//decide primary color
-
-function colorPicker() {
-    const root = document.querySelector(':root')
-    if(document.title == "Gaming Gauntlet || Breakout") {
-        root.style.setProperty('--primary-color', 'red')
-        console.log('hi')
-        primaryColor = 'red'
-    }
-}
-
-colorPicker()
 
 let bricks = []
 let lives = 3
@@ -48,8 +35,8 @@ const ball = {
     x: canvas.width / 2 ,
     y: canvas.height / 2,
     radius: 6,
-    speedX: 4,
-    speedY: 4,
+    speedX: 2 + difficulty,
+    speedY: 2 + difficulty,
     xDirection: 0,
     yDirection: 0
 }
@@ -216,11 +203,11 @@ function update() {
     
     
     // Game won state
-    if (score >= 10) {
+    if (score >= 45) {
         gameOver = true        
         totalScore = totalScore + (scoreMultiplier * 100)
         scoreMultiplier += 1
-        Difficulty += 1
+        difficulty += 1
         winLoseScreen.style.display = 'flex'
         winLoseScreen.innerHTML = `
         <h2>Congrats you've won!</h2>
@@ -236,7 +223,7 @@ function update() {
         gameOver = true        
         canvas.style.display = 'none'
         scoreMultiplier = 1
-        Difficulty = 1
+        difficulty = 1
         winLoseScreen.style.display = 'flex'
         winLoseScreen.innerHTML = `
         <h2>Your Score multiplyer and difficulty have been reset!</h2>

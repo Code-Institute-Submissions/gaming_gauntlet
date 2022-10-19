@@ -24,3 +24,20 @@ The aim is to make 5 easily accessible and understandable games which will be pl
     * As a returning visitor, I want to feel like return visits will offer increasing value.
     * As a returning visitor, I want to easily see any improvement made by myself with multiple uses of the website.  
     *  As a returning visitor, I want to feel after this visit there will still be more reason for me to keep returning.
+
+
+### Design
+
+#### Colour Scheme
+
+![Websites colour palette](documentation/systemshock_palette.png)
+
+For this project the three main prevalent colours I decided on were Persian Indigo #33006E, Raw Sienna #D98B5D and White #fff.
+
+As the name came first I initially thought of yellow for its connection to lightning though I found it too bright. With the Raw Sienna colour I found it pops off the screen enough without being distracting.
+
+With the Persian Indigo the approach was similar, I needed a complementary darker colour that I felt had the same characteristics, eye catching without being too overbearing.
+
+#### Typography
+
+For typography I decided to go for a singular font from [Google Fonts](https://fonts.google.com/) called Silkscreen. This was chosen for its retro feel and it gels well with the overall theme of playing old school games on a CRT Television. 
