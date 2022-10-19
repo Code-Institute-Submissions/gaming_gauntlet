@@ -4,7 +4,7 @@ Gaming gauntlet is a project designed around my love of gaming and challenge. As
 
 The aim is to make 5 easily accessible and understandable games which will be played in a "gauntlet" style with no breaks in between. The order is up to the player with each consecutive win making the subsequent game harder while offering more points towards your final score. Hopefully creating the complexity and replay-ability I am aiming for without having that deeper coding knowledge I am just shy of at the moment 
 
-
+[Link](https://eeebeedee.github.io/gaming_gauntlet/) to deployed site
 
 ## UX 
 
@@ -30,14 +30,13 @@ The aim is to make 5 easily accessible and understandable games which will be pl
 
 #### Colour Scheme
 
-![Websites colour palette](documentation/systemshock_palette.png)
+![Websites colour palette](documentation/gaming_gauntlet_palatte.png)
 
-For this project the three main prevalent colours I decided on were Persian Indigo #33006E, Raw Sienna #D98B5D and White #fff.
+For this project the selected colours are used separately, each one being the primary colour for a single game with black, white and shades of gray used for everything else.
 
-As the name came first I initially thought of yellow for its connection to lightning though I found it too bright. With the Raw Sienna colour I found it pops off the screen enough without being distracting.
-
-With the Persian Indigo the approach was similar, I needed a complementary darker colour that I felt had the same characteristics, eye catching without being too overbearing.
+The limited colour palette for each single game is to try and reference the style of 4 and 8 bit games. This idea carries over to my color choice also as I tried to pick strong vivid colours that also reminded me of the 80s and 80s media.
 
 #### Typography
 
 For typography I decided to go for a singular font from [Google Fonts](https://fonts.google.com/) called Silkscreen. This was chosen for its retro feel and it gels well with the overall theme of playing old school games on a CRT Television. 
+
