@@ -36,6 +36,8 @@ For this project the selected colours are used separately, each one being the pr
 
 The limited colour palette for each single game is to try and reference the style of 4 and 8 bit games. This idea carries over to my color choice also as I tried to pick strong vivid colours that also reminded me of the 80s and 80s media.
 
+
+
 #### Typography
 
 For typography I decided to go for a singular font from [Google Fonts](https://fonts.google.com/) called Silkscreen. This was chosen for its retro feel and it gels well with the overall theme of playing old school games on a CRT Television. 

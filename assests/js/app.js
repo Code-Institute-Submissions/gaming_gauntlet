@@ -19,6 +19,9 @@ function colorPicker() {
     } else if(document.title == "Gaming Gauntlet || Quiz") {
         root.style.setProperty('--primary-color', '#16A085')
         primaryColor = '#16A085'
+    } else if(document.title == "Gaming Gauntlet || Guess The Number") {
+        root.style.setProperty('--primary-color', '#FF9023')
+        primaryColor = '#FF9023'
     }
 }
 
