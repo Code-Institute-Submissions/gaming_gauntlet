@@ -147,4 +147,8 @@ canvas {
     .crt {
         display: none;
     }
+
+    .win-lose-screen {
+        flex-wrap: wrap;
+    }
 }
