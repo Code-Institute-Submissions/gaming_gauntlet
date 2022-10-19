@@ -120,7 +120,8 @@ function drawLives() {
     ctx.closePath()
 }
 
-// paddle movement  
+// paddle movement
+
 function movePaddle() {
     paddle.x += paddle.xDirection
 
@@ -132,6 +133,8 @@ function movePaddle() {
         paddle.x = canvas.width - paddle.width
     }
 }
+
+// Ball movement and collision with other objects
 
 function moveBall() {
 
@@ -212,6 +215,7 @@ function update() {
     gameOver = false
     
     
+    // Game won state
     if (score >= 10) {
         gameOver = true        
         totalScore = totalScore + (scoreMultiplier * 100)
@@ -227,10 +231,10 @@ function update() {
         
     }
     
+    //Game lost state
     if (lives < 0) {
         gameOver = true        
         canvas.style.display = 'none'
-        window.cancelAnimationFrame(update)
         scoreMultiplier = 1
         Difficulty = 1
         winLoseScreen.style.display = 'flex'
@@ -250,12 +254,10 @@ function update() {
 
 update()
 
-if (score === 5) {
-    winLoseScreen.style.display = 'flex'
-}
 
 
 //right and left arrow key functionality 
+
 function keyDown(e) {
     if (e.key === 'ArrowLeft' || e.key === 'Left') {
         paddle.xDirection = - paddle.speed
@@ -272,23 +274,6 @@ function keyUp(e) {
     }
 }
 
-function touchDown(e) {
-    if (e.target == 'i.fa.fa-chevron-left') {
-        paddle.xDirection = - paddle.speed
-        console.log('hi')
-    }
-
-    if (e.key === 'i.fa.fa-chevron-right' ) {
-        paddle.xDirection =  paddle.speed
-    }
-
-}
-
-function touchUp(e) {
-    if(e.key === 'ArrowLeft' || e.key === 'Left' || e.key === 'ArrowRight' || e.key === 'Right') {
-        paddle.xDirection = 0
-    }
-}
 
 //Event listeners for left and right keys
 
@@ -314,6 +299,8 @@ rightBtn.addEventListener('touchend', () => {
 //Media queries
 
 const mq = window.matchMedia( "(max-width: 500px)" );
+
+//make paddle longer to make mobile play easier
 
 if(mq.matches) {
     paddle.x = canvas.width / 2 - 50
