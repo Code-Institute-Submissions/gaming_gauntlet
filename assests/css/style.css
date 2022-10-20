@@ -45,7 +45,6 @@ body {
     position: relative;
     display: flex;
     background-color: #eee;
-    
     height: 70vh;
     width: 80vw;
     margin: 10vh auto 0;
@@ -56,6 +55,11 @@ body {
     border-bottom-left-radius: 10vw 20vw;
 }
 
+.game {
+    justify-content: center;
+    align-items: center; 
+}
+
 .info-flex {
     display: flex;
     transition: transform .3s ease-in-out;
@@ -63,6 +67,7 @@ body {
 
 .info-screen {
     display: flex;
+    position: relative; /* ask tim, relative makes the crt overlay only cover on info-screen instead of full flex box */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -166,6 +171,23 @@ canvas {
         font-size: 0.8rem;
         padding: 6vh 1rem;
       
+    }
+
+    .info-screen {
+        display: block;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .tutorial-buttons {
+        position: absolute;
+        bottom: 10rem;
     }
 
     .mobile-buttons {
