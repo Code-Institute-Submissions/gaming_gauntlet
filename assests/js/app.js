@@ -26,3 +26,57 @@ function colorPicker() {
 }
 
 colorPicker()
+
+// Index screen functionality 
+
+const homeScreens = document.querySelectorAll('.info-screen')
+const screenFlex = document.querySelector('.info-flex')
+const leftTutorialBtns  = document.querySelectorAll('.tutorial-left')
+const rightTutorialBtns  = document.querySelectorAll('.tutorial-right')
+let homeScreenNumber = 0
+
+// homeScreens.forEach(screen => {
+//     screen.addEventListener('click', (e) => {
+//         console.log(e.target)
+//         if (e.target.className === 'fa fa-chevron-right' && homeScreenNumber <= 5) {
+//             screenFlex.style.transform = 'translateX(-16.6666%)'
+//         }
+
+//         if (e.target.className === 'fa fa-chevron-left' && homeScreenNumber >= 1) {
+//             screenFlex.style.transform = 'translateX(16.6666%)'
+//         }
+        
+//     })
+// })
+
+
+
+infoXPosition = 0
+infoXInterval = 16.6666
+
+leftTutorialBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        if (homeScreenNumber >= 1) {
+            screenFlex.style.transform = `translateX(${infoXPosition + infoXInterval}%)`
+            homeScreenNumber += -1
+            infoXPosition += infoXInterval
+          
+        }
+    })
+})
+
+rightTutorialBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        if (homeScreenNumber <= 4) {
+            screenFlex.style.transform = `translateX(${infoXPosition - infoXInterval}%)`
+            homeScreenNumber += 1
+            infoXPosition -= infoXInterval
+    
+            // leftTutorialBtns.style.zIndex = '3'
+            // rightTutorialBtns.style.zIndex = '3'
+        }
+    })
+})
+
+
+
