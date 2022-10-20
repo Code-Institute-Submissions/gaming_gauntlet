@@ -203,17 +203,19 @@ function update() {
     
     
     // Game won state
-    if (score >= 45) {
+    if (score >= 4) {
         gameOver = true        
         totalScore = totalScore + (scoreMultiplier * 100)
         scoreMultiplier += 1
         difficulty += 1
         winLoseScreen.style.display = 'flex'
         winLoseScreen.innerHTML = `
-        <h2>Congrats you've won!</h2>
+        <<h2>Congrats you've won!</h2>
         <h2>Current Score : ${totalScore}</h2>
         <h2>Current current multiplier : x${scoreMultiplier}</h2>
-        <h2> choose your next game! </h2>
+        <h2> choose your next game or retstart from scratch! </h2>
+        <a class="restart-button" href="index.html">Restart Gauntlet</a>
+        <div class="crt crt-overlay"></div>
         `
         
     }
@@ -229,7 +231,9 @@ function update() {
         <h2>Your Score multiplyer and difficulty have been reset!</h2>
         <h2>Current Score : ${totalScore}</h2>
         <h2>Current current multiplier : x${scoreMultiplier}</h2>
-        <h2> choose your next game! </h2>
+        <h2> choose your next game or retstart from scratch! </h2>
+        <a class="restart-button" href="index.html">Restart Gauntlet</a>
+        <div class="crt crt-overlay"></div>
         `
     }
     

@@ -67,7 +67,7 @@ body {
 
 .info-screen {
     display: flex;
-    position: relative; /* ask tim, relative makes the crt overlay only cover on info-screen instead of full flex box */
+    position: relative; /* ask tim, relative makes the crt overlay only cover one info-screen instead of full flex box */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -98,6 +98,14 @@ h1,h2 {
     z-index: 3;
 }
 
+.tutorial-left:active {
+    transform: scale(0.95);
+}
+
+.tutorial-right:active {
+    transform: scale(0.95);
+}
+
 /* GAME CANVAS */
 
 canvas {
@@ -122,8 +130,11 @@ canvas {
     position: absolute;
 }
 
+/* Win/lose screen */
+
 .win-lose-screen {
     display: none;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -133,6 +144,22 @@ canvas {
     width: 100%;
     height: 100%;
 } 
+
+/* restart button */
+
+.restart-button {
+    border: 5px solid var(--primary-color);
+    padding: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 4;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.restart-button:active {
+    transform: scale(0.95);
+}
 
 /* Mobile Buttons */
 
