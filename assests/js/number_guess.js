@@ -36,12 +36,12 @@ function checkAnswer(e) {
         } else if (numberInput.value < randomNum) {
             lives += -1
             guessesLeft.innerText = `${lives}`
-            hint.innerText = `Go Higher`
+            hint.innerText = `Go Higher!`
         } else if (numberInput.value > randomNum) {
             lives += -1
             console.log(lives)
             guessesLeft.innerText = `${lives}`
-            hint.innerText = `Go Lower`
+            hint.innerText = `Go Lower!`
         }   else {
 
         }
@@ -70,6 +70,6 @@ function addToCounter() {
     }
 }
 
-window.setInterval(addToCounter, 25)
+setInterval(addToCounter, 25)
 
 numberInput.addEventListener('keypress', checkAnswer)
