@@ -210,7 +210,7 @@ function update() {
         difficulty += 1
         winLoseScreen.style.display = 'flex'
         winLoseScreen.innerHTML = `
-        <<h2>Congrats you've won!</h2>
+        <h2>Congrats you've won!</h2>
         <h2>Current Score : ${totalScore}</h2>
         <h2>Current current multiplier : x${scoreMultiplier}</h2>
         <h2> choose your next game or retstart from scratch! </h2>

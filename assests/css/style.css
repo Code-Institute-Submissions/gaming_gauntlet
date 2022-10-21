@@ -124,10 +124,8 @@ canvas {
 }
 
 .crt-overlay {
-    width: 1000%;
     height: 100%;
     z-index: 2;
-    position: absolute;
 }
 
 /* Win/lose screen */

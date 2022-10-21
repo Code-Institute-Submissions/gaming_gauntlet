@@ -35,21 +35,6 @@ const leftTutorialBtns  = document.querySelectorAll('.tutorial-left')
 const rightTutorialBtns  = document.querySelectorAll('.tutorial-right')
 let homeScreenNumber = 0
 
-// homeScreens.forEach(screen => {
-//     screen.addEventListener('click', (e) => {
-//         console.log(e.target)
-//         if (e.target.className === 'fa fa-chevron-right' && homeScreenNumber <= 5) {
-//             screenFlex.style.transform = 'translateX(-16.6666%)'
-//         }
-
-//         if (e.target.className === 'fa fa-chevron-left' && homeScreenNumber >= 1) {
-//             screenFlex.style.transform = 'translateX(16.6666%)'
-//         }
-        
-//     })
-// })
-
-
 
 infoXPosition = 0
 infoXInterval = 16.6666

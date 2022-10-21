@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 const numberBox = document.getElementById('number-box')
 const hint = document.getElementById('guess-hint')
 const numberInput = document.getElementById('number-input')
@@ -5,6 +7,7 @@ const guessesLeft = document.getElementById('guesses-left')
 const winLoseScreen = document.getElementById('win-lose-screen')
 
 let lives = 3
+let numberCounter = 0
 const randomNum = getRandomNumber()
 
 console.log(randomNum)
@@ -17,7 +20,8 @@ function checkAnswer(e) {
     if (e.key === "Enter") {
         // if game is won
         if(numberInput.value == randomNum) {
-            totalScore = totalScore + (scoreMultiplier * 100)
+            //create a function for winning
+        totalScore = totalScore + (scoreMultiplier * 100)
         scoreMultiplier += 1
         difficulty += 1
         winLoseScreen.style.display = 'flex'
@@ -32,17 +36,17 @@ function checkAnswer(e) {
         } else if (numberInput.value < randomNum) {
             lives += -1
             guessesLeft.innerText = `${lives}`
-            hint.innerHTML = `
-            <h2>Go Higher</h2>
-            `
+            hint.innerText = `Go Higher`
         } else if (numberInput.value > randomNum) {
             lives += -1
             console.log(lives)
             guessesLeft.innerText = `${lives}`
-            hint.innerHTML = `
-            <h2>Go Lower</h2>
-            `
-        } else if (lives < 0) {
+            hint.innerText = `Go Lower`
+        }   else {
+
+        }
+        
+        if (lives < 0) {
             scoreMultiplier = 1
             difficulty = 1
             winLoseScreen.style.display = 'flex'
@@ -57,5 +61,15 @@ function checkAnswer(e) {
         }
     }
 }
+
+function addToCounter() {
+    numberCounter += 1
+    numberBox.innerText = `${numberCounter}`
+    if(numberCounter === 100) {
+        numberCounter = 0
+    }
+}
+
+window.setInterval(addToCounter, 25)
 
 numberInput.addEventListener('keypress', checkAnswer)
