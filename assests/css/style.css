@@ -161,6 +161,49 @@ canvas {
     transform: scale(0.95);
 }
 
+/* guess the number */
+
+.number-guess-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.number-box {
+    border: 5px solid var(--primary-color);
+    padding: 1rem;
+    font-size: 5rem;
+}
+
+.number-input {
+    font-family: 'Silkscreen', sans-serif;
+    width: 20%;
+    padding: 3rem;
+    color: var(--primary-color);
+    outline: none;
+    border: none;
+    border-bottom: 5px solid var(--primary-color);
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 5;
+    height: 2rem;
+    font-size: 5rem;
+}
+
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
 /* Mobile Buttons */
 
 .mobile-buttons {

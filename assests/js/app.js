@@ -72,11 +72,13 @@ rightTutorialBtns.forEach(btn => {
             homeScreenNumber += 1
             infoXPosition -= infoXInterval
     
-            // leftTutorialBtns.style.zIndex = '3'
-            // rightTutorialBtns.style.zIndex = '3'
         }
     })
 })
 
+// set local storage to know if any game has been played yet
 
+localStorage.setItem('breakoutPlayed', 'false')
+localStorage.setItem('guessPlayed', 'false')
+localStorage.setItem('quizPlayed', 'false')
 
