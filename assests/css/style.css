@@ -12,10 +12,21 @@ body {
 /* NAVBAR */
 
 .nav {
+    position: relative;
     height: 10vh;
     width: 100%;
     background-color: #000;
 }
+
+.home-btn {
+    position: absolute;
+    top: 50%;
+    left: 5vw;
+    color: #fff;
+    font-size: 2rem;
+    transform: translateY(-50%);
+}
+
 
 .game-links {
     height: 100%;
