@@ -30,7 +30,7 @@ function checkAnswer(e) {
         <h2>Current Score : ${totalScore}</h2>
         <h2>Current current multiplier : x${scoreMultiplier}</h2>
         <h2> choose your next game or retstart from scratch! </h2>
-        <a class="restart-button" href="index.html">Restart Gauntlet</a>
+        <a class="restart-btn" href="index.html">Restart Gauntlet</a>
         <div class="crt crt-overlay"></div>
         `
         } else if (numberInput.value < randomNum) {
@@ -55,7 +55,7 @@ function checkAnswer(e) {
             <h2>Current Score : ${totalScore}</h2>
             <h2>Current current multiplier : x${scoreMultiplier}</h2>
             <h2> choose your next game or retstart from scratch! </h2>
-            <a class="restart-button" href="index.html">Restart Gauntlet</a>
+            <a class="restart-btn" href="index.html">Restart Gauntlet</a>
             <div class="crt crt-overlay"></div>
             `
         }

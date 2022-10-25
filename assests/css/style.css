@@ -18,17 +18,9 @@ body {
     background-color: #000;
 }
 
-.home-btn {
-    position: absolute;
-    top: 50%;
-    left: 5vw;
-    color: #fff;
-    font-size: 2rem;
-    transform: translateY(-50%);
-}
-
 
 .game-links {
+    width: 100vw;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -46,8 +38,18 @@ body {
     text-decoration: none;
 }
 
+.game-links li:first-child {
+    justify-self: start;
+}
+
 .game-link.active {
     background-color: var(--primary-color);
+}
+
+.home-btn {
+    color: #fff;
+    font-size: 2rem;
+    transform: translateY(-50%);
 }
 
 /* Screen container of index.html */
@@ -78,7 +80,7 @@ body {
 
 .info-screen {
     display: flex;
-    position: relative; /* ask tim, relative makes the crt overlay only cover one info-screen instead of full flex box */
+    position: relative; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -123,10 +125,6 @@ canvas {
     width: 90%;
     height: 90%;
     background-color: #fff;
-    /* border-bottom-right-radius: 10vw 20vw;
-    border-top-right-radius: 10vw 20vw;
-    border-top-left-radius: 10vw 20vw;
-    border-bottom-left-radius: 10vw 20vw; */
     border-bottom-right-radius: 3vw;
     border-top-right-radius: 3vw;
     border-top-left-radius: 3vw;
@@ -156,7 +154,7 @@ canvas {
 
 /* restart button */
 
-.restart-button {
+.restart-btn {
     border: 5px solid var(--primary-color);
     padding: 2rem;
     font-size: 2rem;
@@ -211,6 +209,41 @@ canvas {
 
 input[type=number]{
     -moz-appearance: textfield;
+}
+
+/* Quiz game */
+
+.quiz-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.answers {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10rem;
+    margin: 5rem 0;
+}
+
+.btn {
+    max-width: 20rem;
+    font-family: inherit;
+    background: transparent;
+    border: 5px solid var(--primary-color);
+    padding: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 4;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.btn:active {
+    transform: scale(0.95);
 }
 
 /* Mobile Buttons */
