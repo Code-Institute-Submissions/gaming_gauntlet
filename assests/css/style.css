@@ -214,19 +214,26 @@ input[type=number]{
 /* Quiz game */
 
 .quiz-container {
+    width: 90%;
+    height: 905;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: var(--primary-color);
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+.question {
+    text-align: center;
+    padding: 2rem;
 }
 
 .answers {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 10rem;
-    margin: 5rem 0;
+    gap: 6rem;
+    margin: 2rem 0;
 }
 
 .btn {
@@ -235,7 +242,7 @@ input[type=number]{
     background: transparent;
     border: 5px solid var(--primary-color);
     padding: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     z-index: 4;
     color: var(--primary-color);
