@@ -44,7 +44,6 @@ async function getQuiz() {
             correctAnswer = data.results[currentQuestion].correct_answer
 
             shuffleArr(answers)
-            console.log(answers)
 
             answersEl.innerHTML = `
             <button class="quiz-btn">${answers[0]}</button>
@@ -52,13 +51,10 @@ async function getQuiz() {
             <button class="quiz-btn">${answers[2]}</button>
             <button class="quiz-btn">${answers[3]}</button>
             `
-            console.log(correctAnswer)
             answerBtns = document.querySelectorAll('.quiz-btn')
 
             answerBtns.forEach(btn => {
                 btn.addEventListener('click', (e) => {
-
-                    console.log(e.target.innerText)
                     checkAnswer(e)
                 } )
             })
@@ -67,7 +63,6 @@ async function getQuiz() {
 
 function checkAnswer(e) {
     if(e.target.innerText == correctAnswer) {
-        console.log('correct')
         questionEl.innerText = 'Correct!'
         answersEl.innerHTML = ''
         currentQuestion += 1
@@ -75,11 +70,9 @@ function checkAnswer(e) {
         if (currentQuestion < 10) {
         setTimeout(getQuiz, 1000)
         }  else  {
-            console.log('hello')
             setTimeout(checkWinLose, 1000)
         }
     } else {
-        console.log('incorrect')
         questionEl.innerText = 'incorrect X'
         answersEl.innerHTML = ''
         currentQuestion += 1
@@ -87,13 +80,11 @@ function checkAnswer(e) {
         if (currentQuestion < 5) {
             setTimeout(getQuiz, 1000)
         } else  {
-            console.log('hello')
             setTimeout(checkWinLose, 1000)
         }
     }
 }
 
-console.log(currentQuestion)
 
 function checkWinLose() {
     if (currentQuestion === 10 && quizScore >= 6) {
