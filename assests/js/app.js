@@ -1,5 +1,7 @@
 /* jshint esversion: 11 */
 
+const gameLinks = document.querySelectorAll('a')
+
 let scoreMultiplier = 1
 let totalScore = 0
 let difficulty = 1
@@ -65,12 +67,31 @@ rightTutorialBtns.forEach(btn => {
 
 
 window.addEventListener('load', () => {
-    console.log('hello')
     if (window.location.pathname == '/index.html') {
         console.log('hello')
         localStorage.setItem('breakoutPlayed', 'false')
         localStorage.setItem('guessPlayed', 'false')
         localStorage.setItem('quizPlayed', 'false') 
+    }
+
+    if (localStorage.getItem('breakoutPlayed') === 'true') {
+        gameLinks[2].style.background = '#585959'
+        gameLinks[2].style.color = '#000'
+        gameLinks[2].href = '#'
+
+    }
+
+    if (localStorage.getItem('guessPlayed') === 'true') {
+        gameLinks[3].style.background = '#585959'
+        gameLinks[3].style.color = '#000'
+        gameLinks[3].href = '#'
+
+    }
+    if (localStorage.getItem('quizPlayed') === 'true') {
+        gameLinks[4].style.background = '#585959'
+        gameLinks[4].style.color = '#000'
+        gameLinks[4].href = '#'
+
     }
 })
 
