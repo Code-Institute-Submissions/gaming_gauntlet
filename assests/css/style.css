@@ -158,6 +158,7 @@ canvas {
     border: 5px solid var(--primary-color);
     padding: 2rem;
     font-size: 2rem;
+    margin-top: 5rem;
     cursor: pointer;
     z-index: 4;
     color: var(--primary-color);
