@@ -236,7 +236,7 @@ input[type=number]{
     margin: 2rem 0;
 }
 
-.btn {
+.quiz-btn {
     max-width: 20rem;
     font-family: inherit;
     background: transparent;
@@ -249,7 +249,7 @@ input[type=number]{
     text-decoration: none;
 }
 
-.btn:active {
+.quiz-btn:active {
     transform: scale(0.95);
 }
 
