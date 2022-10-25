@@ -36,7 +36,6 @@ async function getQuiz() {
     await fetch(URLArr[difficulty - 1])
         .then(res => res.json())
         .then(data => {
-            console.log(data.results)
             questionEl.innerHTML = `<div id="question">${data.results[currentQuestion].question}</div>
             `
             const answers = [...data.results[currentQuestion].incorrect_answers, data.results[currentQuestion].correct_answer]
