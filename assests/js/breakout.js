@@ -203,7 +203,7 @@ function update() {
     
     
     // Game won state
-    if (score >= 4) {
+    if (score >= 45) {
         gameOver = true        
         totalScore = totalScore + (scoreMultiplier * 100)
         scoreMultiplier += 1
@@ -217,6 +217,7 @@ function update() {
         <a class="restart-btn" href="index.html">Restart Gauntlet</a>
         <div class="crt crt-overlay"></div>
         `
+        localStorage.setItem('breakoutPlayed', 'true')
         
     }
     
@@ -235,6 +236,7 @@ function update() {
         <a class="restart-btn" href="index.html">Restart Gauntlet</a>
         <div class="crt crt-overlay"></div>
         `
+        localStorage.setItem('breakoutPlayed', 'true')
     }
     
     if(gameOver === false) {

@@ -63,7 +63,16 @@ rightTutorialBtns.forEach(btn => {
 
 // set local storage to know if any game has been played yet
 
-localStorage.setItem('breakoutPlayed', 'false')
-localStorage.setItem('guessPlayed', 'false')
-localStorage.setItem('quizPlayed', 'false')
+
+window.addEventListener('load', () => {
+    console.log('hello')
+    if (window.location.pathname == '/index.html') {
+        console.log('hello')
+        localStorage.setItem('breakoutPlayed', 'false')
+        localStorage.setItem('guessPlayed', 'false')
+        localStorage.setItem('quizPlayed', 'false') 
+    }
+})
+
+
 

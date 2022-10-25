@@ -99,6 +99,7 @@ function checkWinLose() {
             <a class="restart-btn" href="index.html">Restart Gauntlet</a>
             <div class="crt crt-overlay"></div>
             `
+            localStorage.setItem('quizPlayed', 'true') 
         
     } else {
         scoreMultiplier = 1
@@ -112,6 +113,7 @@ function checkWinLose() {
         <a class="restart-btn" href="index.html">Restart Gauntlet</a>
         <div class="crt crt-overlay"></div>
         `
+        localStorage.setItem('quizPlayed', 'true') 
     }
 }
 

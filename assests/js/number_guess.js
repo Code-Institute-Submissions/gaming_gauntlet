@@ -33,6 +33,7 @@ function checkAnswer(e) {
         <a class="restart-btn" href="index.html">Restart Gauntlet</a>
         <div class="crt crt-overlay"></div>
         `
+        localStorage.setItem('guessPlayed', 'true')
         } else if (numberInput.value < randomNum) {
             lives += -1
             guessesLeft.innerText = `${lives}`
@@ -58,6 +59,7 @@ function checkAnswer(e) {
             <a class="restart-btn" href="index.html">Restart Gauntlet</a>
             <div class="crt crt-overlay"></div>
             `
+            localStorage.setItem('guessPlayed', 'true')
         }
     }
 }

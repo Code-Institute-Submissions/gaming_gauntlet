@@ -288,9 +288,24 @@ input[type=number]{
     }
 
     .game-link {
-        font-size: 0.8rem;
+        font-size: 1rem;
         padding: 6vh 1rem;
       
+    }
+
+    .home-btn.active {
+        display: none;
+    }
+
+    .active {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        background: transparent;
+        transform: translateX(-50%);
+        font-size: 2rem;
     }
 
     .info-screen {
