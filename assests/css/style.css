@@ -107,7 +107,7 @@ h1,h2 {
 
 .tutorial-buttons {
     position: absolute;
-    bottom: 5rem;
+    bottom: 1rem;
     width: 100%;
     display: flex;
     justify-content: space-around;

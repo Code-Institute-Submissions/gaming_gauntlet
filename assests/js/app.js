@@ -15,13 +15,13 @@ function colorPicker() {
     if(document.location.pathname == "/breakout.html") {
         root.style.setProperty('--primary-color', '#D6347B')
         primaryColor = '#D6347B'
-    } else if(document.title == "Gaming Gauntlet") {
+    } else if(document.location.pathname == "/index.html") {
         root.style.setProperty('--primary-color', '#585959')
         primaryColor = '#585959'
-    } else if(document.title == "Gaming Gauntlet || Quiz") {
+    } else if(document.location.pathname == "/quiz.html") {
         root.style.setProperty('--primary-color', '#16A085')
         primaryColor = '#16A085'
-    } else if(document.title == "Gaming Gauntlet || Guess The Number") {
+    } else if(document.location.pathname == "/number_guess.html") {
         root.style.setProperty('--primary-color', '#FF9023')
         primaryColor = '#FF9023'
     }
@@ -72,6 +72,10 @@ window.addEventListener('load', () => {
         localStorage.setItem('breakoutPlayed', 'false')
         localStorage.setItem('guessPlayed', 'false')
         localStorage.setItem('quizPlayed', 'false') 
+        localStorage.setItem('difficulty', '1')
+        localStorage.setItem('scoreMultiplier', '1')
+        localStorage.setItem('totalScore', '0')
+        localStorage.setItem('gamesPlayed', '0')
     }
 
     if (localStorage.getItem('breakoutPlayed') === 'true') {
