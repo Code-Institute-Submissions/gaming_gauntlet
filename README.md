@@ -42,3 +42,23 @@ The limited colour palette for each single game is to try and reference the styl
 
 For typography I decided to go for a singular font from [Google Fonts](https://fonts.google.com/) called Silkscreen. This was chosen for its retro feel and it gels well with the overall theme of playing old school games on a CRT Television. 
 
+## Features
+
+### Navbar
+
+![navbar](documentation/navbar_desktop.png)
+![navbar while a game is selected](documentation/navbar_game_selected.png)
+![navbar when game is finished and unselectable](documentation/navbar_game_completed.png)
+
+#### For desktop - tablet
+- Simple old school layout to keep in line with the overall old school aesthetic.
+- Whichever game is selected on the nav bar is highlighted by its background changing to the active primary color.
+- Game link is greyed out and unselectable after completion as seen above unless game is restarted or home page is loaded again.
+
+![navbar-mobile](documentation/navbar_mobile.png)
+![navbar-mobile-game](documentation/navbar_mobile_game.png)
+
+#### For mobile
+- same principles as desktop menu.
+- Active game moves to below navbar to free up space and keep other links with enough breathing space. 
+- Home menu button only appears on the game pages now.
