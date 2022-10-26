@@ -29,6 +29,15 @@ function colorPicker() {
 
 colorPicker()
 
+// set Variables after game concludes
+function setVariables() {
+    localStorage.setItem('difficulty', difficulty)
+    localStorage.setItem('scoreMultiplier', scoreMultiplier)
+    localStorage.setItem('totalScore', totalScore)
+    localStorage.setItem('gamesPlayed', gamesPlayed)
+    console.log(scoreMultiplier)
+}
+
 // Index screen functionality 
 
 const homeScreens = document.querySelectorAll('.info-screen')

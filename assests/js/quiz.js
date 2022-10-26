@@ -122,6 +122,7 @@ function checkWinLose() {
         <div class="crt crt-overlay"></div>
         `;
         localStorage.setItem('quizPlayed', 'true') ;
+        setVariables()
     // If game is lost
     } else {
         scoreMultiplier = 1;
@@ -136,6 +137,7 @@ function checkWinLose() {
         <div class="crt crt-overlay"></div>
         `;
         localStorage.setItem('quizPlayed', 'true') ;
+        setVariables()
     }
 }
 

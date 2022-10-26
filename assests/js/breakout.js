@@ -22,9 +22,7 @@ function getVariables() {
 
 getVariables()
 
-//Set game as already played 
-// localStorage.setItem('breakoutPlayed', 'true')
-
+//init specific variables for breakout
 
 let bricks = []
 let lives = 3
@@ -214,7 +212,7 @@ function update() {
     
     
     // Game won state
-    if (score >= 45) {
+    if (score >= 4) {
         gameOver = true        
         totalScore = totalScore + (scoreMultiplier * 100)
         scoreMultiplier += 1
@@ -229,6 +227,7 @@ function update() {
         <div class="crt crt-overlay"></div>
         `
         localStorage.setItem('breakoutPlayed', 'true')
+        setVariables()
         
     }
     
@@ -248,6 +247,7 @@ function update() {
         <div class="crt crt-overlay"></div>
         `
         localStorage.setItem('breakoutPlayed', 'true')
+        setVariables()
     }
     
     if(gameOver === false) {

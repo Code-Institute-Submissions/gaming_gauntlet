@@ -1,10 +1,26 @@
 /* jshint esversion: 11 */
 
+//Bring in DOM elements
+
 const numberBox = document.getElementById('number-box')
 const hint = document.getElementById('guess-hint')
 const numberInput = document.getElementById('number-input')
 const guessesLeft = document.getElementById('guesses-left')
 const winLoseScreen = document.getElementById('win-lose-screen')
+
+//draw variables out of local storage
+function getVariables() {
+    scoreMultiplier = parseInt(localStorage.getItem('scoreMultiplier'))
+    difficulty = parseInt(localStorage.getItem('difficulty'))
+    totalScore = parseInt(localStorage.getItem('totalScore'))
+    gamesPlayed = parseInt(localStorage.getItem('gamesPlayed'))
+    
+    console.log(totalScore)
+}
+
+getVariables()
+
+//init specific variables for number guess
 
 let lives = 3
 let numberCounter = 0
@@ -26,7 +42,7 @@ function checkAnswer(e) {
         difficulty += 1
         winLoseScreen.style.display = 'flex'
         winLoseScreen.innerHTML = `
-        <<h2>Congrats you've won!</h2>
+        <h2>Congrats you've won!</h2>
         <h2>Current Score : ${totalScore}</h2>
         <h2>Current current multiplier : x${scoreMultiplier}</h2>
         <h2> choose your next game or retstart from scratch! </h2>
@@ -34,6 +50,7 @@ function checkAnswer(e) {
         <div class="crt crt-overlay"></div>
         `
         localStorage.setItem('guessPlayed', 'true')
+        setVariables()
         } else if (numberInput.value < randomNum) {
             lives += -1
             guessesLeft.innerText = `${lives}`
@@ -60,6 +77,7 @@ function checkAnswer(e) {
             <div class="crt crt-overlay"></div>
             `
             localStorage.setItem('guessPlayed', 'true')
+            setVariables()
         }
     }
 }
