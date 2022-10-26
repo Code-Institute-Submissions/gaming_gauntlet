@@ -12,7 +12,7 @@ let primaryColor
 
 function colorPicker() {
     const root = document.querySelector(':root')
-    if(document.title == "Gaming Gauntlet || Breakout") {
+    if(document.location.pathname == "/breakout.html") {
         root.style.setProperty('--primary-color', '#D6347B')
         primaryColor = '#D6347B'
     } else if(document.title == "Gaming Gauntlet") {

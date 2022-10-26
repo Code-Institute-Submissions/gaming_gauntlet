@@ -10,6 +10,9 @@ const ctx = canvas.getContext('2d')
 const leftBtn = document.getElementById('left-arrow')
 const rightBtn = document.getElementById('right-arrow')
 
+//Set game as already played 
+// localStorage.setItem('breakoutPlayed', 'true')
+
 
 let bricks = []
 let lives = 3
@@ -28,8 +31,6 @@ const singleBrick = {
     padding: 5
 }
 
-
-
 //Create Ball
 const ball = {
     x: canvas.width / 2 ,
@@ -40,8 +41,6 @@ const ball = {
     xDirection: 0,
     yDirection: 0
 }
-
-
 
 // Create Paddle
 
