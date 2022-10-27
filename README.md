@@ -1,4 +1,5 @@
 # **GAMING GAUNTLET**
+
 <br />
 Gaming gauntlet is a project designed around my love of gaming and challenge. As I felt my JavaScript knowledge is not quite advanced enough to create a game as complex and challenging as I would like to, the compromise I came to in that case is multiple simpler and easier games played consecutively. With the difficulty and score multiplier  changing in each game dependant on your performance in the previous one. 
 
@@ -106,6 +107,7 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
 
 
 ### Home Page
+
 <br />
 
 ![home-page](documentation/home_screen.png)
@@ -124,22 +126,74 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
 <br>
 
 ### Breakout
+
 <br>
 
 ![breakout](documentation/breakout_screen.png)
+
 <br>
 
 - Made using HTML canvas
 - Controlled with the left and right arrows keys.
 - Aim of the game is to clear 45 tiles within one life.
 - Increased difficulty from winning previous games increases the speed of the ball
+- For mobile two on screen buttons are used to substitute for the left and right arrows, along with the size of the paddle increasing to compensate for the reliance on touch screen buttons. (see below:)
+
+![breakout-mobile](documentation/breakout_mobile.png)
 
 <br>
 
 ### Guess The Number
+<br>
 
 ![Guess-the-number](documentation/number_guess_game.png)
+
 <br>
 
 - Given a certain amount of lives you must guess the correct number using a few hints a you guess.
 - Increased difficulty from winning previous increase the range of possible numbers while granting you an extra life to guess.
+
+## Technologies Used
+
+### Languages Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+
+### Tools Used
+
+- [Google Fonts:](https://fonts.google.com/)
+    - Google fonts was used to import the 'Silkscreen' font used throughout the entire website.
+- [Font Awesome:](https://fontawesome.com/)
+    - Font Awesome was used for the icon in the Navbar. and the chevron arrows in the buttons
+- [Git](https://git-scm.com/)
+    - Git was used for version control and to Push to GitHub.
+- [GitHub:](https://github.com/)
+    - GitHub is used to store the project's code remotely and then to host the static website on GitHub Pages.
+- [VScode](https://code.visualstudio.com/)
+    - Vscode was my code editor for this project.
+
+
+## Testing
+
+Please find all information pertaining to testing in [TESTING.md](TESTING.md)
+
+## Deployment
+
+The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the [GitHub repository](https://github.com/EeeBeeDee/gaming_gauntlet), navigate to the Settings tab 
+  - From the source section drop-down menu, select the **Main** Branch, then click "Save".
+  - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found [here](https://eeebeedee.github.io/systemshock_rehearsals/)
+
+### Local Deployment
+
+In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
+
+- `git clone https://github.com/EeeBeeDee/gaming_gauntlet.git`
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/EeeBeeDee/gaming_gauntlet)
