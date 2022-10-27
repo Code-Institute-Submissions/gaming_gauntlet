@@ -11,12 +11,6 @@ const leftBtn = document.getElementById('left-arrow')
 const rightBtn = document.getElementById('right-arrow')
 
 //draw variables out of local storage
-function getVariables() {
-    scoreMultiplier = parseInt(localStorage.getItem('scoreMultiplier'))
-    difficulty = parseInt(localStorage.getItem('difficulty'))
-    totalScore = parseInt(localStorage.getItem('totalScore'))
-    gamesPlayed = parseInt(localStorage.getItem('gamesPlayed'))
-}
 
 getVariables()
 

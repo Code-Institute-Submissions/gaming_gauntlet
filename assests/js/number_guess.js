@@ -10,12 +10,6 @@ const winLoseScreen = document.getElementById('win-lose-screen')
 const span = document.getElementById('number-span')
 
 //draw variables out of local storage
-function getVariables() {
-    scoreMultiplier = parseInt(localStorage.getItem('scoreMultiplier'))
-    difficulty = parseInt(localStorage.getItem('difficulty'))
-    totalScore = parseInt(localStorage.getItem('totalScore'))
-    gamesPlayed = parseInt(localStorage.getItem('gamesPlayed'))
-}
 
 getVariables()
 
@@ -40,7 +34,8 @@ function checkAnswer(e) {
     if (e.key === "Enter") {
         // if game is won
         if(numberInput.value == randomNum) {
-            //create a function for winning
+
+        //create a function for winning
         totalScore = totalScore + (scoreMultiplier * 100)
         scoreMultiplier += 1
         difficulty += 1
@@ -55,6 +50,7 @@ function checkAnswer(e) {
         `
         localStorage.setItem('guessPlayed', 'true')
         setVariables()
+
         } else if (numberInput.value < randomNum) {
             lives += -1
             guessesLeft.innerText = `${lives}`
@@ -82,6 +78,7 @@ function checkAnswer(e) {
             localStorage.setItem('guessPlayed', 'true')
             setVariables()
         }
+        e.target.value = ''
     }
 }
 

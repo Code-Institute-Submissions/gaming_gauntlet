@@ -15,6 +15,10 @@ let lives = 1
 let score = 0
 let gameOver = false
 
+//draw variables out of local storage
+
+getVariables()
+
 // Snake class 
 
 class Snake {
