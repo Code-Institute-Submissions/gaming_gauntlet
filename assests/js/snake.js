@@ -1,12 +1,15 @@
 /* jshint esversion: 11 */
 
+//bring in needed DOM elements
+
 const winLoseScreen = document.getElementById('win-lose-screen')
 
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 
-const singleBlock = 20
+// Define game parameters
 
+const singleBlock = 20
 
 const rows = canvas.height / singleBlock
 const columns = canvas.width / singleBlock
@@ -137,9 +140,10 @@ class Food {
     }
 }
 
-// Init and setup snake 
+// Init and setup snake and food
 
 let snake;
+let food
 
 function setup() {
     snake = new Snake
@@ -148,6 +152,8 @@ function setup() {
     snake.drawSnake()
     food.pickLocation()
     
+
+    //set speed of game through set interval
 
     const gameClock = setInterval(() => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -160,6 +166,7 @@ function setup() {
             score++
         }
 
+        // Game won state
         if (score >= 25) {
             gameOver = true        
             totalScore = totalScore + (scoreMultiplier * 100)
@@ -180,6 +187,7 @@ function setup() {
             
         }
 
+        // Game lost state
         if(lives < 0) {
             gameOver = true        
             canvas.style.display = 'none'
