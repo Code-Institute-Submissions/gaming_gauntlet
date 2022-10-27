@@ -24,6 +24,9 @@ function colorPicker() {
     } else if(document.location.pathname == "/number_guess.html") {
         root.style.setProperty('--primary-color', '#FF9023')
         primaryColor = '#FF9023'
+    } else if(document.location.pathname == "/snake.html") {
+        root.style.setProperty('--primary-color', '#89ae00')
+        primaryColor = '#89ae00'
     }
 }
 
