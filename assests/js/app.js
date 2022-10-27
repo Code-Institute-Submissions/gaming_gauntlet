@@ -81,31 +81,36 @@ window.addEventListener('load', () => {
         localStorage.setItem('breakoutPlayed', 'false')
         localStorage.setItem('guessPlayed', 'false')
         localStorage.setItem('quizPlayed', 'false') 
+        localStorage.setItem('snakePlayed', 'false') 
         localStorage.setItem('difficulty', '1')
         localStorage.setItem('scoreMultiplier', '1')
         localStorage.setItem('totalScore', '0')
         localStorage.setItem('gamesPlayed', '0')
     }
 
+    if (localStorage.getItem('snakePlayed') === 'true') {
+        gameLinks[1].style.background = '#585959'
+        gameLinks[1].style.color = '#000'
+        gameLinks[1].href = '#'
+    }
+
     if (localStorage.getItem('breakoutPlayed') === 'true') {
         gameLinks[2].style.background = '#585959'
         gameLinks[2].style.color = '#000'
         gameLinks[2].href = '#'
-
     }
 
     if (localStorage.getItem('guessPlayed') === 'true') {
         gameLinks[3].style.background = '#585959'
         gameLinks[3].style.color = '#000'
         gameLinks[3].href = '#'
-
     }
     if (localStorage.getItem('quizPlayed') === 'true') {
         gameLinks[4].style.background = '#585959'
         gameLinks[4].style.color = '#000'
         gameLinks[4].href = '#'
-
     }
+    
 })
 
 

@@ -1,14 +1,19 @@
 /* jshint esversion: 11 */
 
+const winLoseScreen = document.getElementById('win-lose-screen')
+
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 
-const singleBlock = 10
+const singleBlock = 20
+
 
 const rows = canvas.height / singleBlock
 const columns = canvas.width / singleBlock
 
 let lives = 3
+let score = 0
+let gameOver = false
 
 // Snake class 
 
@@ -18,14 +23,29 @@ class Snake {
         this.y = 20;
         this.xSpeed = singleBlock * 1
         this.ySpeed = 0
+        this.totalSize = 0
+        this.tail = []
     }
 
     drawSnake() {
         ctx.fillStyle = primaryColor
+
+        for (let i = 0; i < this.tail.length; i++) {
+            ctx.fillRect(this.tail[i].x, this.tail[i].y, singleBlock, singleBlock)
+
+        }
+
         ctx.fillRect(this.x, this.y, singleBlock, singleBlock)
     }
 
     update() {
+        for (let i = 0; i < this.tail.length - 1; i++) {
+            this.tail[i] = this.tail[i+1]
+        }
+
+        this.tail[this.totalSize -1] = { x: this.x, y: this.y};
+
+
         snake.x += snake.xSpeed
         snake.y += snake.ySpeed 
 
@@ -39,7 +59,7 @@ class Snake {
 
                 this.xSpeed = singleBlock * 1
                 this.ySpeed = 0
-                
+
                 lives += -1
                 console.log(lives)
         }
@@ -65,6 +85,35 @@ class Snake {
             break;
         }
     }
+
+    eat(food) {
+        if (this.x === food.x &&
+            this.y === food.y) {
+                this.totalSize++
+                return true
+            } 
+        return false
+    }
+}
+
+// Food class
+
+class Food {
+    constructor() {
+        this.x;
+        this.y;
+    }
+
+    pickLocation() {
+        this.x = (Math.floor(Math.random() * rows -1) +1 ) * singleBlock
+        this.y = (Math.floor(Math.random() * columns -1) +1 ) * singleBlock
+        console.log(this.x, this.y)
+    }
+
+    drawFood() {
+        ctx.fillStyle = primaryColor
+        ctx.fillRect(this.x, this.y, singleBlock, singleBlock)
+    }
 }
 
 // Init and setup snake 
@@ -73,23 +122,78 @@ let snake;
 
 function setup() {
     snake = new Snake
-    snake.drawSnake()
+    food = new Food
 
-    setInterval(() => {
+    snake.drawSnake()
+    food.pickLocation()
+    
+
+    const gameClock = setInterval(() => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        food.drawFood()
         snake.drawSnake()
         snake.update()
-    }, 200)
+
+        if(snake.eat(food)) {
+            food.pickLocation()
+            score++
+        }
+
+        if (score >= 3) {
+            gameOver = true        
+            totalScore = totalScore + (scoreMultiplier * 100)
+            scoreMultiplier += 1
+            difficulty += 1
+            winLoseScreen.style.display = 'flex'
+            winLoseScreen.innerHTML = `
+            <h2>Congrats you've won!</h2>
+            <h2>Current Score : ${totalScore}</h2>
+            <h2>Current current multiplier : x${scoreMultiplier}</h2>
+            <h2> choose your next game or retstart from scratch! </h2>
+            <a class="restart-btn" href="index.html">Restart Gauntlet</a>
+            <div class="crt crt-overlay"></div>
+            `
+            localStorage.setItem('snakePlayed', 'true')
+            setVariables()
+            clearInterval(gameClock)
+            
+        }
+
+        if(lives < 0) {
+            gameOver = true        
+            canvas.style.display = 'none'
+            scoreMultiplier = 1
+            difficulty = 1
+            winLoseScreen.style.display = 'flex'
+            winLoseScreen.innerHTML = `
+            <h2>Your Score multiplyer and difficulty have been reset!</h2>
+            <h2>Current Score : ${totalScore}</h2>
+            <h2>Current current multiplier : x${scoreMultiplier}</h2>
+            <h2> choose your next game or retstart from scratch! </h2>
+            <a class="restart-btn" href="index.html">Restart Gauntlet</a>
+            <div class="crt crt-overlay"></div>
+            `
+            localStorage.setItem('snakePlayed', 'true')
+            setVariables()
+            clearInterval(gameClock)
+        }
+
+
+    }, (200 / difficulty))
+
+
+
 }
 
 
 
 setup()
 
+
+
 // Event listeners for movement 
 
 window.addEventListener('keydown', (e) => {
-    console.log(e)
     const direction = e.key.replace('Arrow', '')
     snake.changeDirection(direction)
 })
