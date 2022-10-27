@@ -7,6 +7,12 @@ const winLoseScreen = document.getElementById('win-lose-screen')
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 
+// mobile touch buttons
+const leftBtn = document.getElementById('left-arrow')
+const rightBtn = document.getElementById('right-arrow')
+const upBtn = document.getElementById('up-arrow')
+const downBtn = document.getElementById('down-arrow')
+
 // Define game parameters
 
 const singleBlock = 20
@@ -118,6 +124,9 @@ class Snake {
             } 
         return false
     }
+
+
+
 }
 
 // Food class
@@ -226,3 +235,26 @@ window.addEventListener('keydown', (e) => {
     const direction = e.key.replace('Arrow', '')
     snake.changeDirection(direction)
 })
+
+// Mobile movement
+
+leftBtn.addEventListener('touchstart', () => {
+    snake.xSpeed = singleBlock * -1
+    snake.ySpeed = 0
+})
+
+rightBtn.addEventListener('touchstart', () => {
+    snake.xSpeed = singleBlock * 1
+    snake.ySpeed = 0
+})
+
+upBtn.addEventListener('touchstart', () => {
+    snake.xSpeed = 0
+    snake.ySpeed = singleBlock * -1
+})
+
+downBtn.addEventListener('touchstart', () => {
+    snake.xSpeed = 0
+    snake.ySpeed = singleBlock * 1
+})
+

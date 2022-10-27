@@ -260,10 +260,11 @@ input[type=number]{
 /* Mobile Buttons */
 
 .mobile-buttons {
+    width: 100vw;
     display: none;
     justify-content: space-between;
     align-items: center;
-    padding:  6rem;
+    padding: 4rem;
 }
 
 .left-arrow {
@@ -281,6 +282,24 @@ input[type=number]{
 }
 
 .right-arrow i {
+    padding: 1rem;
+}
+
+.up-arrow {
+    font-size: 4rem;
+    border: 5px solid #000;
+}
+
+.up-arrow i {
+    padding: 1rem;
+}
+
+.down-arrow {
+    font-size: 4rem;
+    border: 5px solid #000;
+}
+
+.down-arrow i {
     padding: 1rem;
 }
 
