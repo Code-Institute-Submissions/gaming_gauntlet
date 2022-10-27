@@ -7,6 +7,7 @@ const hint = document.getElementById('guess-hint')
 const numberInput = document.getElementById('number-input')
 const guessesLeft = document.getElementById('guesses-left')
 const winLoseScreen = document.getElementById('win-lose-screen')
+const span = document.getElementById('number-span')
 
 //draw variables out of local storage
 function getVariables() {
@@ -20,15 +21,19 @@ getVariables()
 
 //init specific variables for number guess
 
-let lives = 5
+let lives = 5 + (difficulty - 1)
 let numberCounter = 0
+let range = 20 * difficulty
 const randomNum = getRandomNumber()
+span.innerText = range
 
 console.log(randomNum)
 
+guessesLeft.innerText = lives
+
 
 function getRandomNumber() {
-    return Math.floor(Math.random() * 100) + 1
+    return Math.floor(Math.random() * range) + 1
 }
 
 function checkAnswer(e) {
