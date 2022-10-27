@@ -11,7 +11,7 @@ const singleBlock = 20
 const rows = canvas.height / singleBlock
 const columns = canvas.width / singleBlock
 
-let lives = 3
+let lives = 1
 let score = 0
 let gameOver = false
 
@@ -59,9 +59,26 @@ class Snake {
 
                 this.xSpeed = singleBlock * 1
                 this.ySpeed = 0
+              
 
                 lives += -1
-                console.log(lives)
+                score = 0
+        }
+
+        //Check for game over by hitting tail
+        for (let i = 0; i < this.tail.length - 1; i++) {
+            if (this.x === this.tail[i].x &&
+                this.y === this.tail[i].y) {
+                    this.x = 20;
+                    this.y = 20
+
+                    this.xSpeed = singleBlock * 1
+                    this.ySpeed = 0
+                   
+
+                    lives += -1
+                    score = 0
+                }
         }
     }
 
