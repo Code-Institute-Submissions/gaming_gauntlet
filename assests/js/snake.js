@@ -50,9 +50,9 @@ class Snake {
         snake.y += snake.ySpeed 
 
         //Check for game over by hitting edge
-        if (this.x > canvas.width ||
+        if (this.x >= canvas.width ||
             this.x < 0 ||
-            this.y > canvas.height ||
+            this.y >= canvas.height ||
             this.y < 0) {
                 this.x = 20;
                 this.y = 20
@@ -139,7 +139,7 @@ function setup() {
             score++
         }
 
-        if (score >= 3) {
+        if (score >= 25) {
             gameOver = true        
             totalScore = totalScore + (scoreMultiplier * 100)
             scoreMultiplier += 1
