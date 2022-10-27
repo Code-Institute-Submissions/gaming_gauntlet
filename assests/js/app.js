@@ -55,8 +55,7 @@ leftTutorialBtns.forEach(btn => {
         if (homeScreenNumber >= 1) {
             screenFlex.style.transform = `translateX(${infoXPosition + infoXInterval}%)`
             homeScreenNumber += -1
-            infoXPosition += infoXInterval
-          
+            infoXPosition += infoXInterval      
         }
     })
 })
@@ -67,7 +66,6 @@ rightTutorialBtns.forEach(btn => {
             screenFlex.style.transform = `translateX(${infoXPosition - infoXInterval}%)`
             homeScreenNumber += 1
             infoXPosition -= infoXInterval
-    
         }
     })
 })
@@ -77,7 +75,6 @@ rightTutorialBtns.forEach(btn => {
 
 window.addEventListener('load', () => {
     if (window.location.pathname == '/index.html') {
-        console.log('hello')
         localStorage.setItem('breakoutPlayed', 'false')
         localStorage.setItem('guessPlayed', 'false')
         localStorage.setItem('quizPlayed', 'false') 

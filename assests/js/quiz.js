@@ -12,8 +12,6 @@ function getVariables() {
     difficulty = parseInt(localStorage.getItem('difficulty'))
     totalScore = parseInt(localStorage.getItem('totalScore'))
     gamesPlayed = parseInt(localStorage.getItem('gamesPlayed'))
-    
-    console.log(totalScore)
 }
 
 getVariables()

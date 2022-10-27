@@ -16,8 +16,6 @@ function getVariables() {
     difficulty = parseInt(localStorage.getItem('difficulty'))
     totalScore = parseInt(localStorage.getItem('totalScore'))
     gamesPlayed = parseInt(localStorage.getItem('gamesPlayed'))
-    
-    console.log(totalScore)
 }
 
 getVariables()
@@ -212,7 +210,7 @@ function update() {
     
     
     // Game won state
-    if (score >= 4) {
+    if (score >= 45) {
         gameOver = true        
         totalScore = totalScore + (scoreMultiplier * 100)
         scoreMultiplier += 1

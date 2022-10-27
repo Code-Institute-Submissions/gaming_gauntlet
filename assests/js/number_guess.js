@@ -14,19 +14,18 @@ function getVariables() {
     difficulty = parseInt(localStorage.getItem('difficulty'))
     totalScore = parseInt(localStorage.getItem('totalScore'))
     gamesPlayed = parseInt(localStorage.getItem('gamesPlayed'))
-    
-    console.log(totalScore)
 }
 
 getVariables()
 
 //init specific variables for number guess
 
-let lives = 3
+let lives = 5
 let numberCounter = 0
 const randomNum = getRandomNumber()
 
 console.log(randomNum)
+
 
 function getRandomNumber() {
     return Math.floor(Math.random() * 100) + 1
@@ -57,7 +56,6 @@ function checkAnswer(e) {
             hint.innerText = `Go Higher!`
         } else if (numberInput.value > randomNum) {
             lives += -1
-            console.log(lives)
             guessesLeft.innerText = `${lives}`
             hint.innerText = `Go Lower!`
         }   else {
