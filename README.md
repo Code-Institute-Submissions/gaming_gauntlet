@@ -217,6 +217,8 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
     - GitHub is used to store the project's code remotely and then to host the static website on GitHub Pages.
 - [VScode](https://code.visualstudio.com/)
     - Vscode was my code editor for this project.
+- [OpenTrivaDatabase](https://opentdb.com/)
+    - OpenTDB was used to source the quiz questions and answers.
 
 
 ## Testing
