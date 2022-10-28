@@ -10,21 +10,24 @@ let gamesPlayed = 0
 //decide primary color
 let primaryColor 
 
+console.log(window.location.pathname)
+
 function colorPicker() {
     const root = document.querySelector(':root')
-    if(document.location.pathname == "/breakout.html") {
+
+    if(window.location.pathname == "/breakout.html") {
         root.style.setProperty('--primary-color', '#D6347B')
         primaryColor = '#D6347B'
-    } else if(document.location.pathname == "/index.html") {
+    } else if(window.location.pathname == "/index.html") {
         root.style.setProperty('--primary-color', '#585959')
         primaryColor = '#585959'
-    } else if(document.location.pathname == "/quiz.html") {
+    } else if(window.location.pathname == "/quiz.html") {
         root.style.setProperty('--primary-color', '#16A085')
         primaryColor = '#16A085'
-    } else if(document.location.pathname == "/number_guess.html") {
+    } else if(window.location.pathname == "/number_guess.html") {
         root.style.setProperty('--primary-color', '#FF9023')
         primaryColor = '#FF9023'
-    } else if(document.location.pathname == "/snake.html") {
+    } else if(window.location.pathname == "/snake.html") {
         root.style.setProperty('--primary-color', '#89ae00')
         primaryColor = '#89ae00'
     }
