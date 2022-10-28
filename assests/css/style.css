@@ -303,6 +303,10 @@ input[type=number]{
     padding: 1rem;
 }
 
+.tutorial-mobile {
+    display: none;
+}
+
 @media screen and (max-width: 500px) {
 
     .game-container {
@@ -343,17 +347,21 @@ input[type=number]{
     }
 
     .tutorial-buttons {
-        position: absolute;
-        bottom: 10rem;
+      display: none;
+    }
+
+    .tutorial-mobile {
+        display: flex;
+        padding: 3rem;
     }
 
     .mobile-buttons {
         display: flex;
     }
 
-    .crt {
+    /* .crt {
         display: none;
-    }
+    } */
 
     .win-lose-screen {
         flex-wrap: wrap;

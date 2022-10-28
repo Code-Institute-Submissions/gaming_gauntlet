@@ -1,13 +1,13 @@
 # **GAMING GAUNTLET**
 
-<br />
+<br >
 Gaming gauntlet is a project designed around my love of gaming and challenge. As I felt my JavaScript knowledge is not quite advanced enough to create a game as complex and challenging as I would like to, the compromise I came to in that case is multiple simpler and easier games played consecutively. With the difficulty and score multiplier  changing in each game dependant on your performance in the previous one. 
 
-<br />
+<br/>
 
 The aim is to make 5 easily accessible and understandable games which will be played in a "gauntlet" style with no breaks in between. The order is up to the player with each consecutive win making the subsequent game harder while offering more points towards your final score. Hopefully creating the complexity and replay-ability I am aiming for without having that deeper coding knowledge I am just shy of at the moment 
 
-<br />
+<br/>
 
 [Link](https://eeebeedee.github.io/gaming_gauntlet/) to deployed site
 
@@ -197,3 +197,12 @@ In order to make a local copy of this project, you can clone it. In your IDE Ter
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/EeeBeeDee/gaming_gauntlet)
+
+### Acknowledgements
+
+[Tim_nelson](https://tim.2bn.dev/) - My CI mentor for all the guidance, tips and tricks. 
+
+The CI slack channel for all the tips, tricks and help.
+
+[Alec Clowns](aleclownes.com) For the crt filter display he created with just CSS.
+
