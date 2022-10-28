@@ -175,7 +175,25 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
 <br>
 
 - Given a certain amount of lives you must guess the correct number using a few hints a you guess.
-- Increased difficulty from winning previous increase the range of possible numbers while granting you an extra life to guess.
+- Increased difficulty from winning previous games increase the range of possible numbers while granting you an extra life to guess.
+
+<br>
+
+### Quiz
+<br>
+
+![Quiz](documentation/quiz_game.png)
+
+<br>
+
+- Correctly guess 6 of 10 questions correctly to win the game.
+- used Open Triva Database's API to source questions.
+- Increased difficulty from winning previous games increase the difficulty of the questions ranging from gaming triva(easy-med-hard) to computer science(med-hard).
+- On mobile font size and padding are reduced to keep all information onscreen at smaller sizes. (see below:)
+
+<br>
+
+![Quiz Mobile](documentation/quiz_game_mobile.png)
 
 <br>
 
