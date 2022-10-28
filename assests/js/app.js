@@ -6,28 +6,30 @@ let scoreMultiplier = 1
 let totalScore = 0
 let difficulty = 5
 let gamesPlayed = 0
+let currentPath = window.location.pathname.split(/[\/]/).pop()
+const repo = '/gaming_gauntlet'
 
 //decide primary color
 let primaryColor 
 
-console.log(window.location.pathname)
+console.log(currentPath)
 
 function colorPicker() {
     const root = document.querySelector(':root')
 
-    if(window.location.pathname == "/breakout.html") {
+    if(currentPath == `breakout.html`) {
         root.style.setProperty('--primary-color', '#D6347B')
         primaryColor = '#D6347B'
-    } else if(window.location.pathname == "/index.html") {
+    } else if(currentPath == `/index.html`) {
         root.style.setProperty('--primary-color', '#585959')
         primaryColor = '#585959'
-    } else if(window.location.pathname == "/quiz.html") {
+    } else if(currentPath == `quiz.html`) {
         root.style.setProperty('--primary-color', '#16A085')
         primaryColor = '#16A085'
-    } else if(window.location.pathname == "/number_guess.html") {
+    } else if(currentPath == `number_guess.html`) {
         root.style.setProperty('--primary-color', '#FF9023')
         primaryColor = '#FF9023'
-    } else if(window.location.pathname == "/snake.html") {
+    } else if(currentPath == `snake.html`) {
         root.style.setProperty('--primary-color', '#89ae00')
         primaryColor = '#89ae00'
     }
@@ -87,8 +89,9 @@ rightTutorialBtns.forEach(btn => {
 // set local storage to know if any game has been played yet
 
 
+
 window.addEventListener('load', () => {
-    if (window.location.pathname == '/index.html') {
+    if (currentPath == `index.html`) {
         localStorage.setItem('breakoutPlayed', 'false')
         localStorage.setItem('guessPlayed', 'false')
         localStorage.setItem('quizPlayed', 'false') 
