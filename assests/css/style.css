@@ -359,11 +359,21 @@ input[type=number]{
         display: flex;
     }
 
-    /* .crt {
-        display: none;
-    } */
+    .quiz-container {
+        font-size: 1.3rem;
+    }
+
+    .quiz-btn {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
 
     .win-lose-screen {
         flex-wrap: wrap;
     }
+}
+
+@media screen and (max-width: 450px) {
+
+    
 }

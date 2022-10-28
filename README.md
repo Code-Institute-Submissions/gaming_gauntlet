@@ -11,6 +11,8 @@ The aim is to make 5 easily accessible and understandable games which will be pl
 
 [Link](https://eeebeedee.github.io/gaming_gauntlet/) to deployed site
 
+![Am I Responsive image](documentation/am_i_responsive.png)
+
 <br />
 
 ## UX 
@@ -125,6 +127,26 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
 
 <br>
 
+### Snake
+
+<br>
+
+![Snake](documentation/snake_game.png)
+
+<br>
+
+- Made using HTML canvas
+- Controlled with the four arrows keys.
+- Aim of the game is to eat 25 pieces of food within 2 lives.
+- Increased difficulty from winning previous games increases the speed of the snakes movement
+- For mobile four on screen buttons are used to substitute for the directional buttons. (see below:)
+
+<br>
+
+![Snake-mobile](documentation/snake_mobile.png)
+
+<br>
+
 ### Breakout
 
 <br>
@@ -139,6 +161,8 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
 - Increased difficulty from winning previous games increases the speed of the ball
 - For mobile two on screen buttons are used to substitute for the left and right arrows, along with the size of the paddle increasing to compensate for the reliance on touch screen buttons. (see below:)
 
+<br>
+
 ![breakout-mobile](documentation/breakout_mobile.png)
 
 <br>
@@ -152,6 +176,8 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
 
 - Given a certain amount of lives you must guess the correct number using a few hints a you guess.
 - Increased difficulty from winning previous increase the range of possible numbers while granting you an extra life to guess.
+
+<br>
 
 ## Technologies Used
 
@@ -186,7 +212,7 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
   - From the source section drop-down menu, select the **Main** Branch, then click "Save".
   - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-The live link can be found [here](https://eeebeedee.github.io/systemshock_rehearsals/)
+The live link can be found [here](https://eeebeedee.github.io/gaming_gauntlet/)
 
 ### Local Deployment
 
