@@ -140,7 +140,6 @@ class Food {
     pickLocation() {
         this.x = (Math.floor(Math.random() * rows -1) +1 ) * singleBlock
         this.y = (Math.floor(Math.random() * columns -1) +1 ) * singleBlock
-        console.log(this.x, this.y)
     }
 
     drawFood() {
@@ -181,6 +180,7 @@ function setup() {
             totalScore = totalScore + (scoreMultiplier * 100)
             scoreMultiplier += 1
             difficulty += 1
+            gamesPlayed += 1
             winLoseScreen.style.display = 'flex'
             winLoseScreen.innerHTML = `
             <h2>Congrats you've won!</h2>
@@ -192,6 +192,7 @@ function setup() {
             localStorage.setItem('snakePlayed', 'true')
             setVariables()
             clearInterval(gameClock)
+            AllGamesPLayed()
             
         }
 
@@ -201,6 +202,7 @@ function setup() {
             canvas.style.display = 'none'
             scoreMultiplier = 1
             difficulty = 1
+            gamesPlayed += 1
             winLoseScreen.style.display = 'flex'
             winLoseScreen.innerHTML = `
             <h2>Your Score multiplyer and difficulty have been reset!</h2>
@@ -212,7 +214,10 @@ function setup() {
             localStorage.setItem('snakePlayed', 'true')
             setVariables()
             clearInterval(gameClock)
+            AllGamesPLayed()
         }
+
+        
 
 
     }, (200 / difficulty))

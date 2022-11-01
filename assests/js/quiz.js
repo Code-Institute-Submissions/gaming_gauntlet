@@ -99,11 +99,13 @@ function checkAnswer(e) {
 
 // Function that runs after all questions answered to check for win or lose 
 function checkWinLose() {
+
     // If game is won
     if (currentQuestion === 10 && quizScore >= 6) {
         totalScore = totalScore + (scoreMultiplier * 100);
         scoreMultiplier += 1;
         difficulty += 1;
+        gamesPlayed += 1
         winLoseScreen.style.display = 'flex';
         winLoseScreen.innerHTML = `
         <h2>Congrats you've won!</h2>
@@ -114,10 +116,13 @@ function checkWinLose() {
         `;
         localStorage.setItem('quizPlayed', 'true') ;
         setVariables()
+        AllGamesPLayed()
+
     // If game is lost
     } else {
         scoreMultiplier = 1;
         difficulty = 1;
+        gamesPlayed += 1
         winLoseScreen.style.display = 'flex';
         winLoseScreen.innerHTML = `
         <h2>Your Score multiplyer and difficulty have been reset!</h2>
@@ -128,6 +133,7 @@ function checkWinLose() {
         `;
         localStorage.setItem('quizPlayed', 'true') ;
         setVariables()
+        AllGamesPLayed()
     }
 }
 

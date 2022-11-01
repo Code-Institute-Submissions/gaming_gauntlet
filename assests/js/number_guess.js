@@ -39,6 +39,7 @@ function checkAnswer(e) {
         totalScore = totalScore + (scoreMultiplier * 100)
         scoreMultiplier += 1
         difficulty += 1
+        gamesPlayed += 1
         winLoseScreen.style.display = 'flex'
         winLoseScreen.innerHTML = `
         <h2>Congrats you've won!</h2>
@@ -49,6 +50,7 @@ function checkAnswer(e) {
         `
         localStorage.setItem('guessPlayed', 'true')
         setVariables()
+        AllGamesPLayed()
 
         } else if (numberInput.value < randomNum) {
             lives += -1
@@ -65,6 +67,7 @@ function checkAnswer(e) {
         if (lives < 0) {
             scoreMultiplier = 1
             difficulty = 1
+            gamesPlayed += 1
             winLoseScreen.style.display = 'flex'
             winLoseScreen.innerHTML = `
             <h2>Your Score multiplyer and difficulty have been reset!</h2>
@@ -75,6 +78,7 @@ function checkAnswer(e) {
             `
             localStorage.setItem('guessPlayed', 'true')
             setVariables()
+            AllGamesPLayed()
         }
         e.target.value = ''
     }

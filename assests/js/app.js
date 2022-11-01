@@ -12,7 +12,7 @@ let currentPath = window.location.pathname.split(/[\/]/).pop()
 //decide primary color
 let primaryColor 
 
-console.log(currentPath)
+
 
 function colorPicker() {
     const root = document.querySelector(':root')
@@ -51,7 +51,26 @@ function setVariables() {
     localStorage.setItem('scoreMultiplier', scoreMultiplier)
     localStorage.setItem('totalScore', totalScore)
     localStorage.setItem('gamesPlayed', gamesPlayed)
-    console.log(scoreMultiplier)
+    console.log(`diff ${difficulty}`)
+    console.log(`multi ${scoreMultiplier}`)
+    console.log(`total ${totalScore}`)
+    console.log(`gamesplayed ${gamesPlayed}`)
+}
+
+// Check if all games have been played for final screen
+
+function AllGamesPLayed() {
+    if (gamesPlayed == 4) {
+        winLoseScreen.style.display = 'flex'
+        winLoseScreen.innerHTML = `
+        <h2>Congrats you finished the gauntlet!</h2>
+        <h2>Current Score : ${totalScore}</h2>
+        <h2>Current current multiplier : x${scoreMultiplier}</h2>
+        <h2> the highest possible score is 1500! how close did you get?</h2>
+        <h2>Are you ready to brave the gauntlet again?</h2>
+        <a class="restart-btn" href="index.html">Restart Gauntlet</a>
+        `
+    }
 }
 
 // Index screen functionality 
