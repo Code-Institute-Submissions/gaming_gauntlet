@@ -202,7 +202,7 @@ canvas {
     border-bottom: 5px solid var(--primary-color);
     background-color: transparent;
     cursor: pointer;
-    z-index: 5;
+    z-index: 1;
     height: 2rem;
     font-size: 5rem;
 }
