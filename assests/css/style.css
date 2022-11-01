@@ -192,6 +192,11 @@ canvas {
     font-size: 5rem;
 }
 
+#guess-hint {
+    padding: 2rem;
+    font-size: 2rem;
+}
+
 .number-input {
     font-family: 'Silkscreen', sans-serif;
     width: 20%;
