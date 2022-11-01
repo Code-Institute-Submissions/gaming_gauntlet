@@ -7,7 +7,7 @@ let totalScore = 0
 let difficulty = 5
 let gamesPlayed = 0
 let currentPath = window.location.pathname.split(/[\/]/).pop()
-const repo = '/gaming_gauntlet'
+
 
 //decide primary color
 let primaryColor 
@@ -63,8 +63,8 @@ const rightTutorialBtns  = document.querySelectorAll('.tutorial-right')
 let homeScreenNumber = 0
 
 
-infoXPosition = 0
-infoXInterval = 16.6666
+let infoXPosition = 0
+let infoXInterval = 16.6666
 
 leftTutorialBtns.forEach(btn => {
     btn.addEventListener('click', () => {

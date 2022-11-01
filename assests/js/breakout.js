@@ -216,7 +216,6 @@ function update() {
         <h2>Current current multiplier : x${scoreMultiplier}</h2>
         <h2> choose your next game or retstart from scratch! </h2>
         <a class="restart-btn" href="index.html">Restart Gauntlet</a>
-        <div class="crt crt-overlay"></div>
         `
         localStorage.setItem('breakoutPlayed', 'true')
         setVariables()
@@ -236,7 +235,6 @@ function update() {
         <h2>Current current multiplier : x${scoreMultiplier}</h2>
         <h2> choose your next game or retstart from scratch! </h2>
         <a class="restart-btn" href="index.html">Restart Gauntlet</a>
-        <div class="crt crt-overlay"></div>
         `
         localStorage.setItem('breakoutPlayed', 'true')
         setVariables()
