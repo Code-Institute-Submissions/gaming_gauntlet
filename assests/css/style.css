@@ -314,6 +314,12 @@ input[type=number]{
     display: none;
 }
 
+@media  screen and (max-width: 800px) {
+    .mobile-buttons {
+        display: flex;
+    }
+}
+
 @media screen and (max-width: 600px) {
 
     .game-link {
@@ -387,8 +393,5 @@ input[type=number]{
     }
 }
 
-@media screen and (max-width: 450px) {
 
-    
-}
 
