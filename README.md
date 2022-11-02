@@ -89,7 +89,7 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
 
 - Simple old school layout to keep in line with the overall old school aesthetic.
 - Whichever game is selected on the nav bar is highlighted by its background changing to the active primary color.
-- Game link is greyed out and unselectable after completion as seen above unless game is restarted or home page is loaded again.
+- Game link is greyed out and un-selectable after completion as seen above unless game is restarted or home page is loaded again.
 
 
 
@@ -116,7 +116,7 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
 
 
 
-- The CRT motif is shared througout the project and does not change other than primary colour for any html page. All content save the navbar is displayed within here.
+- The CRT motif is shared throughout the project and does not change other than primary colour for any html page. All content save the navbar is displayed within here.
 - On the home page the core concept is explained along with arrow buttons to allow navigation to tutorial pages for all the games.
 -  for mobile the only change is the dimensions of the CRT to allow the content to be viewed better on small screens. (see below:)
 
@@ -194,6 +194,12 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
 
 ![Quiz Mobile](documentation/quiz_game_mobile.png)
 
+### Pacman
+
+![pacman](documentation/pacman_game.png)
+
+Unfortunately due to a bit of over ambition, I was not able to include my own version of pacman. It proved to be just too much of a stretch time wise. It is something I plan to add in the future as the game is extremely close to my original vision and that is something I am quite proud of.
+
 
 
 ## Technologies Used
@@ -250,4 +256,6 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 The CI slack channel for all the tips, tricks and help.
 
 [Alec Clowns](aleclownes.com) For the crt filter display he created with just CSS.
+
+[Kris Foster](https://www.youtube.com/watch?v=21eSpMtJwrc) For the youtube snake tutorial which helped me immensely in understanding the logic behind this game.
 
