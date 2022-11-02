@@ -200,6 +200,12 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
 
 Unfortunately due to a bit of over ambition, I was not able to include my own version of pacman. It proved to be just too much of a stretch time wise. It is something I plan to add in the future as the game is extremely close to my original vision and that is something I am quite proud of.
 
+### Results Screen
+
+![results-screen](documentation/results_screen.png)
+
+After every game if you win ir lose you will see a results screen which will let you know you current total score and multiplier.
+
 
 
 ## Technologies Used
