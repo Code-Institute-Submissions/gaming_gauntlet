@@ -43,7 +43,7 @@ All my CSS files showed no warnings or errors when validated.
 #### Quiz
 ![Javascript-validation-quiz](documentation/jshint_quiz.png)
 
-My javascript files showed no errors. The only issue is some pages show undefined variables due to the fact that some global variables that are shared are stored solely on the app.js file 
+My javascript files showed no errors. The only issue is some pages show undefined variables due to the fact that some global variables that are shared are stored solely on the app.js file.
 
 ## Compatibility 
 
@@ -55,6 +55,15 @@ My javascript files showed no errors. The only issue is some pages show undefine
 ![firefox-validation](documentation/firefox_compat.png)
 
 Above are images of the site working on chrome on desktop, opera with tablet dimensions and firefox with mobile dimensions.
+
+## Responsiveness
+
+#### Tablet
+![tablet-responsiveness](documentation/tablet_respon.png)
+#### Mobile
+![mobile-responsiveness](documentation/mobile_respon.png)
+
+Above are images of the site working in desktop ,tablet and mobile dimensions.
 
 ## Unfixed bugs 
 
