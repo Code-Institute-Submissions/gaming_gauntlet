@@ -175,7 +175,7 @@ function setup() {
         }
 
         // Game won state
-        if (score >= 25) {
+        if (score >= 20) {
             gameOver = true;        
             totalScore = totalScore + (scoreMultiplier * 100);
             scoreMultiplier += 1;
@@ -186,7 +186,7 @@ function setup() {
             <h2>Congrats you've won!</h2>
             <h2>Current Score : ${totalScore}</h2>
             <h2>Current current multiplier : x${scoreMultiplier}</h2>
-            <h2> choose your next game or retstart from scratch! </h2>
+            <h2> choose your next game or restart from scratch! </h2>
             <a class="restart-btn" href="index.html">Restart Gauntlet</a>
             `;
             localStorage.setItem('snakePlayed', 'true');
