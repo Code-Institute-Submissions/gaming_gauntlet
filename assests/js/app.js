@@ -16,21 +16,25 @@ let primaryColor;
 function colorPicker() {
     const root = document.querySelector(':root');
 
-    if(currentPath == `breakout.html`) {
+    if (currentPath == `breakout.html`) {
         root.style.setProperty('--primary-color', '#D6347B');
         primaryColor = '#D6347B';
-    } else if(currentPath == `/index.html`) {
+    } else if (currentPath == `/index.html`) {
         root.style.setProperty('--primary-color', '#585959');
         primaryColor = '#585959';
-    } else if(currentPath == `quiz.html`) {
+    } else if (currentPath == `quiz.html`) {
         root.style.setProperty('--primary-color', '#16A085');
         primaryColor = '#16A085';
-    } else if(currentPath == `number_guess.html`) {
+    } else if (currentPath == `number_guess.html`) {
         root.style.setProperty('--primary-color', '#FF9023');
         primaryColor = '#FF9023';
-    } else if(currentPath == `snake.html`) {
+    } else if (currentPath == `snake.html`) {
         root.style.setProperty('--primary-color', '#89ae00');
         primaryColor = '#89ae00';
+    } else if (currentPath == `pacman.html`) {
+        root.style.setProperty('--primary-color', '#6820ab');
+        primaryColor = '#6820ab';
+        document.body.style.color = '#6820ab'
     }
 }
 
@@ -61,7 +65,7 @@ function AllGamesPLayed() {
         <h2>Congrats you finished the gauntlet!</h2>
         <h2>Current Score : ${totalScore}</h2>
         <h2>Current current multiplier : x${scoreMultiplier}</h2>
-        <h2> the highest possible score is 1500! how close did you get?</h2>
+        <h2> the highest possible score is 1000! how close did you get?</h2>
         <h2>Are you ready to brave the gauntlet again?</h2>
         <a class="restart-btn" href="index.html">Restart Gauntlet</a>
         `;
