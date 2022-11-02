@@ -26,7 +26,7 @@ The aim is to make 5 easily accessible and understandable games which will be pl
 
     * As a first time user, I want to be easily navigate the website
     * As a first time user, I want my viewing experience to be smooth on any device I use.
-    * As a first time user, I want the website's aim and goals to be easily understood and readily available .
+    * As a first time user, I want the website's aim and goals to be easily understood and readily available.
     * As a first time user, I want the controls and aim of the games included to be intuitive and easy to pick up.
     * As a first time user, I hope to enjoy what is on offer and potentially find in this site something I can come back to and enjoy again. 
 
