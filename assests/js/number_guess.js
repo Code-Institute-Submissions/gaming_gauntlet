@@ -21,7 +21,6 @@ let range = 20 * difficulty;
 const randomNum = getRandomNumber();
 span.innerText = range;
 
-console.log(randomNum);
 
 guessesLeft.innerText = lives;
 
