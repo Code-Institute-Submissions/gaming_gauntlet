@@ -43,7 +43,7 @@ All my CSS files showed no warnings or errors when validated.
 #### Quiz
 ![Javascript-validation-quiz](documentation/jshint_quiz.png)
 
-My javascript files showed no errors. The only issue is some pages show undefined variables due to the fact that some global variables that are shared are stored solely on the app.js file.
+My javascript files showed no errors. The only issue is some pages show undefined or unused variables due to the fact that some global variables and functions that are shared are stored solely on the app.js file.
 
 ## Testing User stories
 
