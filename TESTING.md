@@ -91,7 +91,7 @@ My javascript files showed no errors. The only issue is some pages show undefine
 #### Firefox
 ![firefox-validation](documentation/firefox_compat.png)
 
-Above are images of the site working on chrome on desktop, opera with tablet dimensions and firefox with mobile dimensions.
+Above are images of the site working on chrome, Opera and firefox. All games were fully tested in each browser.
 
 ## Responsiveness
 
@@ -100,7 +100,7 @@ Above are images of the site working on chrome on desktop, opera with tablet dim
 #### Mobile
 ![mobile-responsiveness](documentation/mobile_respon.png)
 
-Above are images of the site working in desktop ,tablet and mobile dimensions.
+Above are images of the site working in tablet and mobile dimensions.
 
 ## Unfixed bugs 
 
